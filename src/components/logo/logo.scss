@@ -1,0 +1,26 @@
+@import "../../assets/variables";
+
+.logo {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  &__circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__item-left {
+    position: absolute;
+    top: 18px;
+    left: 11px;
+  }
+  &__item-right {
+    position: absolute;
+    top: 18px;
+    right: 11px;
+  }
+  &_dark-shade25 {
+    fill: $dark-shade-25;
+  }
+}
+
