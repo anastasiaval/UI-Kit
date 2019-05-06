@@ -1,0 +1,26 @@
+@import "../../assets/variables";
+
+.colors-item {
+  display: flex;
+  &__view {
+    width: 70px;
+    height: 70px;
+    background: $dark-shade-100;
+    border-radius: 6px;
+    margin-right: 40px;
+  }
+  &__desc {
+    font-size: 19px;
+    color: $dark-shade-100;
+    &_name {
+      font-family: Quicksand-Bold, sans-serif;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    &_value {
+      font-family: Quicksand, sans-serif;
+      margin-top: 6px;
+    }
+  }
+}
+
