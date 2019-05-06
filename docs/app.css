@@ -1,5 +1,58 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+@font-face {
+  font-family: 'Quicksand';
+  src: url(assets/fonts/quicksand-regular.svg) format("svg"), url(assets/fonts/quicksand-regular.ttf) format("ttf"), url(assets/fonts/quicksand-regular.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Quicksand-Bold';
+  src: url(assets/fonts/quicksand-bold.svg) format("svg"), url(assets/fonts/quicksand-bold.ttf) format("ttf"), url(assets/fonts/quicksand-bold.woff) format("woff"); }
+
+.logo {
+  top: 30px;
+  left: 30px; }
+
+.content {
+  padding: 140px; }
+
+
+.logo {
+  position: absolute;
+  width: 48px;
+  height: 48px; }
+  .logo__circle {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .logo__item-left {
+    position: absolute;
+    top: 18px;
+    left: 11px; }
+  .logo__item-right {
+    position: absolute;
+    top: 18px;
+    right: 11px; }
+  .logo_dark-shade25 {
+    fill: rgba(31, 32, 65, 0.25); }
+
+.colors {
+  margin-top: -3px;
+  margin-left: 2px; }
+
+.colors-item {
+  display: flex; }
+  .colors-item__view {
+    width: 70px;
+    height: 70px;
+    background: #1F2041;
+    border-radius: 6px;
+    margin-right: 40px; }
+  .colors-item__desc {
+    font-size: 19px;
+    color: #1F2041; }
+    .colors-item__desc_name {
+      font-family: Quicksand-Bold, sans-serif;
+      margin-top: 10px;
+      margin-bottom: 0; }
+    .colors-item__desc_value {
+      font-family: Quicksand, sans-serif;
+      margin-top: 6px; }
 
