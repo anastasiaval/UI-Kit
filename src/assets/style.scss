@@ -1,3 +1,5 @@
+@import "../assets/variables";
+
 @font-face {
   font-family: 'Quicksand';
   src: url('fonts/quicksand-regular.svg') format('svg'),
@@ -12,6 +14,26 @@
   url('fonts/quicksand-bold.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/montserrat-regular.svg') format('svg'),
+  url('fonts/montserrat-regular.ttf') format('ttf'),
+  url('fonts/montserrat-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('fonts/montserrat-bold.svg') format('svg'),
+  url('fonts/montserrat-bold.ttf') format('ttf'),
+  url('fonts/montserrat-bold.woff') format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .logo {
   top: 30px;
   left: 30px;
@@ -21,5 +43,32 @@
   padding: 140px;
   display: flex;
   justify-content: space-between;
+}
+
+.heading {
+  color: $dark-shade-100;
+  &_h1 {
+    font-family: Quicksand-Bold, sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    line-height: 30px;
+  }
+  &_h2 {
+    font-family: Quicksand-Bold, sans-serif;
+    font-size: 19px;
+    line-height: 24px;
+  }
+  &_h3 {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+
+.body-text {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: $dark-shade-75;
+  line-height: 21px;
 }
 
