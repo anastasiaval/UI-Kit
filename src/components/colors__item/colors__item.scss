@@ -2,10 +2,10 @@
 
 .colors-item {
   display: flex;
+  margin-bottom: 20px;
   &__view {
     width: 70px;
     height: 70px;
-    background: $dark-shade-100;
     border-radius: 6px;
     margin-right: 40px;
   }
@@ -20,6 +20,7 @@
     &_value {
       font-family: Quicksand, sans-serif;
       margin-top: 6px;
+      margin-bottom: 0;
     }
   }
 }

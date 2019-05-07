@@ -1,6 +1,7 @@
-.colors-item
-    .colors-item__view
-    .colors-item__desc
-        p.colors-item__desc_name Dark Shade 100%
-        p.colors-item__desc_value #1F2041
+mixin colors__item(name, value, opacity)
+    .colors-item
+        .colors-item__view(style={background: value, opacity: opacity})
+        .colors-item__desc
+            p.colors-item__desc_name= name
+            p.colors-item__desc_value= value
 
