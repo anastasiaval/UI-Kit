@@ -6,12 +6,49 @@
   font-family: 'Quicksand-Bold';
   src: url(assets/fonts/quicksand-bold.svg) format("svg"), url(assets/fonts/quicksand-bold.ttf) format("ttf"), url(assets/fonts/quicksand-bold.woff) format("woff"); }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url(assets/fonts/montserrat-regular.svg) format("svg"), url(assets/fonts/montserrat-regular.ttf) format("ttf"), url(assets/fonts/montserrat-regular.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url(assets/fonts/montserrat-bold.svg) format("svg"), url(assets/fonts/montserrat-bold.ttf) format("ttf"), url(assets/fonts/montserrat-bold.woff) format("woff"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 .logo {
   top: 30px;
   left: 30px; }
 
 .content {
-  padding: 140px; }
+  padding: 140px;
+  display: flex;
+  justify-content: space-between; }
+
+.heading {
+  color: #1F2041; }
+  .heading_h1 {
+    font-family: Quicksand-Bold, sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    line-height: 30px; }
+  .heading_h2 {
+    font-family: Quicksand-Bold, sans-serif;
+    font-size: 19px;
+    line-height: 24px; }
+  .heading_h3 {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase; }
+
+.body-text {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 21px; }
 
 
 .logo {
@@ -34,15 +71,15 @@
     fill: rgba(31, 32, 65, 0.25); }
 
 .colors {
-  margin-top: -3px;
-  margin-left: 2px; }
+  margin-top: 5px;
+  margin-left: 10px; }
 
 .colors-item {
-  display: flex; }
+  display: flex;
+  margin-bottom: 20px; }
   .colors-item__view {
     width: 70px;
     height: 70px;
-    background: #1F2041;
     border-radius: 6px;
     margin-right: 40px; }
   .colors-item__desc {
@@ -50,9 +87,38 @@
     color: #1F2041; }
     .colors-item__desc_name {
       font-family: Quicksand-Bold, sans-serif;
-      margin-top: 10px;
-      margin-bottom: 0; }
+      margin-top: 10px; }
     .colors-item__desc_value {
       font-family: Quicksand, sans-serif;
       margin-top: 6px; }
+
+.type {
+  margin-top: 6px; }
+
+.type__item {
+  display: flex;
+  margin-bottom: 50px; }
+
+.type__name {
+  font-family: Montserrat, sans-serif;
+  width: 40px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.25);
+  margin-right: 30px; }
+
+.type__name_h1 {
+  font-size: 24px; }
+
+.type__name_h2 {
+  font-size: 19px;
+  letter-spacing: -0.3px; }
+
+.type__name_h3 {
+  font-size: 12px; }
+
+.type__name_body {
+  font-size: 14px; }
+
+.type__desc {
+  width: 360px; }
 
