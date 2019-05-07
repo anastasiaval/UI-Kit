@@ -1,0 +1,36 @@
+@import "../../assets/variables";
+
+.type__item {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.type__name {
+  font-family: Montserrat, sans-serif;
+  width: 40px;
+  text-align: right;
+  color: $dark-shade-25;
+  margin-right: 30px;
+}
+
+.type__name_h1 {
+  font-size: 24px;
+}
+
+.type__name_h2 {
+  font-size: 19px;
+  letter-spacing: -0.3px;
+}
+
+.type__name_h3 {
+  font-size: 12px;
+}
+
+.type__name_body {
+  font-size: 14px;
+}
+
+.type__desc {
+  width: 360px;
+}
+

@@ -1,0 +1,11 @@
+.type
+    include ../type__item/type__item
+    -let h1Text = 'This one is the sub-section or widget title'
+    -let h2Text = 'Next one is the item title inside widgets'
+    -let h3Text = 'This is a label or CTA text'
+    -let bodyText = 'This is the body text which is used for most of&nbsp;the&nbsp;design, like paragraphs, lists, etc.'
+        +type__item('H1', 'h1', h1Text, ['heading', 'heading_h1'])
+        +type__item('H2', 'h2', h2Text, ['heading', 'heading_h2'])
+        +type__item('H3', 'h3', h3Text, ['heading', 'heading_h3'])
+        +type__item('Body', 'body', bodyText, ['body-text'])
+

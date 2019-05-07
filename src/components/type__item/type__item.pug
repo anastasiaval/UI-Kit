@@ -1,0 +1,5 @@
+mixin type__item(name, nameMod, text, textClasses)
+    .type__item
+        p.type__name(class='type__name_' + nameMod)= name
+        p.type__desc(class= textClasses) !{text}
+
