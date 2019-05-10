@@ -9,4 +9,12 @@ html(lang="en")
         .content
             include components/colors/colors
             include components/type/type
+        .content
+            div
+                form.form_wide
+                    include components/input/input
+                    +input('Email', 'Text Field', 'Default')
+                    +input('This is pretty awesome', 'Text Field', 'Hover / Focus')
+            div
+            div
 

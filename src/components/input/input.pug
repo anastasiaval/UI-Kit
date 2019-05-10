@@ -1,0 +1,8 @@
+mixin input(placeholder, label_left, label_right)
+    label
+        .input__label
+            span.input__label_left= label_left
+            if label_right
+                span.input__label_right= label_right
+        input.input(type='text', placeholder= placeholder)
+

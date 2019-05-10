@@ -1,0 +1,35 @@
+@import "../../assets/variables";
+
+.input {
+  width: 100%;
+  border: 1px solid $dark-shade-25;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 14px 15px;
+  &::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    color: $dark-shade-25;
+  }
+  &:hover, :focus {
+    &::placeholder {
+      color: $dark-shade-75;
+    }
+  }
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    &_left {
+      font-family: Montserrat-Bold, sans-serif;
+      color: $dark-shade-100;
+    }
+    &_right {
+      font-family: Montserrat, sans-serif;
+      color: rgba(31, 32, 65, 0.5);
+    }
+  }
+}
+
