@@ -5,10 +5,11 @@
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
   margin-bottom: 20px;
-  padding: 14px 15px;
+  padding: 12px 15px;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: $dark-shade-75;
   &::placeholder {
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
     color: $dark-shade-25;
   }
   &:hover, :focus {
@@ -28,7 +29,7 @@
     }
     &_right {
       font-family: Montserrat, sans-serif;
-      color: rgba(31, 32, 65, 0.5);
+      color: $dark-shade-50;
     }
   }
 }
