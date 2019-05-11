@@ -1,11 +1,22 @@
 .type
-    include ../type__item/type__item
-    -let h1Text = 'This one is&nbsp;the sub-section or&nbsp;widget title'
-    -let h2Text = 'Next one is&nbsp;the item title inside widgets'
-    -let h3Text = 'This is&nbsp;a&nbsp;label or&nbsp;CTA text'
-    -let bodyText = 'This is&nbsp;the body text which is&nbsp;used for most of&nbsp;the&nbsp;design, like paragraphs, lists, etc.'
-        +type__item('H1', 'h1', h1Text, ['heading', 'heading_h1'])
-        +type__item('H2', 'h2', h2Text, ['heading', 'heading_h2'])
-        +type__item('H3', 'h3', h3Text, ['heading', 'heading_h3'])
-        +type__item('Body', 'body', bodyText, ['body-text'])
+    .type__item
+        p.type__name.type__name_h1 H1
+        .type__desc
+            include ../text/text
+            +text('h1', 'This one is&nbsp;the sub-section or&nbsp;widget title')
+    .type__item
+        p.type__name.type__name_h2 H2
+        .type__desc
+            include ../text/text
+            +text('h2', 'Next one is&nbsp;the item title inside widgets')
+    .type__item
+        p.type__name.type__name_h3 H3
+        .type__desc
+            include ../text/text
+            +text('h3', 'This is&nbsp;a&nbsp;label or&nbsp;CTA text')
+    .type__item
+        p.type__name.type__name_p Body
+        .type__desc
+            include ../text/text
+            +text('p', 'This is&nbsp;the body text which is&nbsp;used for most of&nbsp;the&nbsp;design, like paragraphs, lists, etc.')
 

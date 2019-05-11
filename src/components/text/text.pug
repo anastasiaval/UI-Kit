@@ -1,0 +1,11 @@
+mixin text(type, text)
+    if type === 'h1'
+        - var classes = ['text_heading', 'text_h1']
+    if type === 'h2'
+        - var classes = ['text_heading', 'text_h2']
+    if type === 'h3'
+        - var classes = ['text_heading', 'text_h3']
+    if type === 'p'
+        - var classes = ['text_heading', 'text_p']
+    #{type}(class= classes) !{text}
+

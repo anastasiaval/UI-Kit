@@ -2,4 +2,32 @@
 
 .type {
   margin-top: 6px;
+  &__item {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  &__desc {
+    width: 360px;
+  }
+  &__name {
+    font-family: Montserrat, sans-serif;
+    width: 40px;
+    text-align: right;
+    color: $dark-shade-25;
+    margin-right: 30px;
+    &_h1 {
+      font-size: 24px;
+    }
+    &_h2 {
+      font-size: 19px;
+      letter-spacing: -0.3px;
+    }
+    &_h3 {
+      font-size: 12px;
+    }
+    &_body {
+      font-size: 14px;
+    }
+  }
 }
+

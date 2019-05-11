@@ -45,33 +45,6 @@
   justify-content: space-between;
 }
 
-.heading {
-  color: $dark-shade-100;
-  &_h1 {
-    font-family: Quicksand-Bold, sans-serif;
-    font-size: 24px;
-    letter-spacing: -0.5px;
-    line-height: 30px;
-  }
-  &_h2 {
-    font-family: Quicksand-Bold, sans-serif;
-    font-size: 19px;
-    line-height: 24px;
-  }
-  &_h3 {
-    font-family: Montserrat-Bold, sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
-  }
-}
-
-.body-text {
-  font-family: Montserrat, sans-serif;
-  font-size: 14px;
-  color: $dark-shade-75;
-  line-height: 21px;
-}
-
 .form {
   &_wide {
     width: 320px;
