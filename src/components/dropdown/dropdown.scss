@@ -61,7 +61,7 @@
     width: 92px;
     &_add-btn {
       font-family: Montserrat, sans-serif;
-      border: 1px solid $dark-shade-25;
+      border: 1px solid $dark-shade-50;
       border-radius: 22px;
       color: $dark-shade-50;
       font-size: 18px;
@@ -71,9 +71,9 @@
     }
     &_remove-btn {
       font-family: Montserrat, sans-serif;
-      border: 1px solid $dark-shade-5;
+      border: 1px solid $dark-shade-25;
       border-radius: 22px;
-      color: $dark-shade-5;
+      color: $dark-shade-25;
       font-size: 18px;
       width: 30px;
       text-align: center;

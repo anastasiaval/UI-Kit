@@ -14,41 +14,54 @@
   font-family: 'Montserrat-Bold';
   src: url(assets/fonts/montserrat-bold.svg) format("svg"), url(assets/fonts/montserrat-bold.ttf) format("ttf"), url(assets/fonts/montserrat-bold.woff) format("woff"); }
 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/fonts/MaterialIcons-Regular.svg) format("svg"), url(assets/fonts/MaterialIcons-Regular.ttf) format("ttf"), url(assets/fonts/MaterialIcons-Regular.woff) format("woff"); }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: 'liga';
+          font-feature-settings: 'liga'; }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75); }
 
 .logo {
   top: 30px;
   left: 30px; }
 
 .content {
-  padding: 140px;
+  margin: 140px;
   display: flex;
   justify-content: space-between; }
 
-.heading {
-  color: #1F2041; }
-  .heading_h1 {
-    font-family: Quicksand-Bold, sans-serif;
-    font-size: 24px;
-    letter-spacing: -0.5px;
-    line-height: 30px; }
-  .heading_h2 {
-    font-family: Quicksand-Bold, sans-serif;
-    font-size: 19px;
-    line-height: 24px; }
-  .heading_h3 {
-    font-family: Montserrat-Bold, sans-serif;
-    font-size: 12px;
-    text-transform: uppercase; }
+.form_wide {
+  width: 320px; }
 
-.body-text {
-  font-family: Montserrat, sans-serif;
-  font-size: 14px;
-  color: rgba(31, 32, 65, 0.75);
-  line-height: 21px; }
+.form_narrow {
+  width: 266px; }
 
 
 .logo {
@@ -94,31 +107,145 @@
 
 .type {
   margin-top: 6px; }
+  .type__item {
+    display: flex;
+    margin-bottom: 50px; }
+  .type__desc {
+    width: 360px; }
+  .type__name {
+    width: 40px;
+    text-align: right;
+    color: rgba(31, 32, 65, 0.25);
+    margin-right: 30px; }
+    .type__name_h1 {
+      font-size: 24px; }
+    .type__name_h2 {
+      font-size: 19px;
+      letter-spacing: -0.3px; }
+    .type__name_h3 {
+      font-size: 12px; }
 
-.type__item {
-  display: flex;
-  margin-bottom: 50px; }
+.heading {
+  color: #1F2041; }
+  .heading_h1 {
+    font-family: Quicksand-Bold, sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    line-height: 30px; }
+  .heading_h2 {
+    font-family: Quicksand-Bold, sans-serif;
+    font-size: 19px;
+    line-height: 24px; }
+  .heading_h3 {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase; }
 
-.type__name {
+.input {
+  width: 100%;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 12px 15px;
   font-family: Montserrat, sans-serif;
-  width: 40px;
-  text-align: right;
-  color: rgba(31, 32, 65, 0.25);
-  margin-right: 30px; }
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75); }
+  .input::-webkit-input-placeholder {
+    color: rgba(31, 32, 65, 0.25); }
+  .input::-moz-placeholder {
+    color: rgba(31, 32, 65, 0.25); }
+  .input:-ms-input-placeholder {
+    color: rgba(31, 32, 65, 0.25); }
+  .input::-ms-input-placeholder {
+    color: rgba(31, 32, 65, 0.25); }
+  .input::placeholder {
+    color: rgba(31, 32, 65, 0.25); }
+  .input:hover::-webkit-input-placeholder, .input :focus::-webkit-input-placeholder {
+    color: rgba(31, 32, 65, 0.75); }
+  .input:hover::-moz-placeholder, .input :focus::-moz-placeholder {
+    color: rgba(31, 32, 65, 0.75); }
+  .input:hover:-ms-input-placeholder, .input :focus:-ms-input-placeholder {
+    color: rgba(31, 32, 65, 0.75); }
+  .input:hover::-ms-input-placeholder, .input :focus::-ms-input-placeholder {
+    color: rgba(31, 32, 65, 0.75); }
+  .input:hover::placeholder, .input :focus::placeholder {
+    color: rgba(31, 32, 65, 0.75); }
+  .input__label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px; }
+    .input__label_left {
+      font-family: Montserrat-Bold, sans-serif;
+      color: #1F2041; }
+    .input__label_right {
+      color: rgba(31, 32, 65, 0.5); }
 
-.type__name_h1 {
-  font-size: 24px; }
-
-.type__name_h2 {
-  font-size: 19px;
-  letter-spacing: -0.3px; }
-
-.type__name_h3 {
-  font-size: 12px; }
-
-.type__name_body {
-  font-size: 14px; }
-
-.type__desc {
-  width: 360px; }
+.dropdown {
+  margin-bottom: 20px; }
+  .dropdown__label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 12px; }
+    .dropdown__label_left {
+      font-family: Montserrat-Bold, sans-serif;
+      color: #1F2041; }
+    .dropdown__label_right {
+      color: rgba(31, 32, 65, 0.5); }
+  .dropdown__field {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px; }
+  .dropdown__default {
+    padding: 11px 8px 7px 15px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer; }
+  .dropdown__icon_arrow {
+    color: rgba(31, 32, 65, 0.5); }
+  .dropdown__expanded {
+    border-top: 1px solid rgba(31, 32, 65, 0.25);
+    display: none;
+    font-family: Montserrat-Bold, sans-serif;
+    color: #1F2041;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 2px 7px 2px 15px; }
+  .dropdown__option {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+    line-height: 28px; }
+    .dropdown__option_clear {
+      color: rgba(31, 32, 65, 0.5);
+      cursor: pointer; }
+    .dropdown__option_apply {
+      color: #BC9CFF;
+      cursor: pointer; }
+    .dropdown__option_last {
+      margin-top: 13px; }
+  .dropdown__counter {
+    display: flex;
+    justify-content: space-between;
+    width: 92px; }
+    .dropdown__counter_add-btn {
+      font-family: Montserrat, sans-serif;
+      border: 1px solid rgba(31, 32, 65, 0.5);
+      border-radius: 22px;
+      color: rgba(31, 32, 65, 0.5);
+      font-size: 18px;
+      width: 30px;
+      text-align: center;
+      cursor: pointer; }
+    .dropdown__counter_remove-btn {
+      font-family: Montserrat, sans-serif;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      border-radius: 22px;
+      color: rgba(31, 32, 65, 0.25);
+      font-size: 18px;
+      width: 30px;
+      text-align: center;
+      cursor: pointer; }
 
