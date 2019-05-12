@@ -10,7 +10,6 @@
     width: 360px;
   }
   &__name {
-    font-family: Montserrat, sans-serif;
     width: 40px;
     text-align: right;
     color: $dark-shade-25;
@@ -24,9 +23,6 @@
     }
     &_h3 {
       font-size: 12px;
-    }
-    &_body {
-      font-size: 14px;
     }
   }
 }

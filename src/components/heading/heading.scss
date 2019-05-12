@@ -1,9 +1,7 @@
 @import "../../assets/variables";
 
-.text {
-  &_heading {
-    color: $dark-shade-100;
-  }
+.heading {
+  color: $dark-shade-100;
   &_h1 {
     font-family: Quicksand-Bold, sans-serif;
     font-size: 24px;
@@ -19,12 +17,6 @@
     font-family: Montserrat-Bold, sans-serif;
     font-size: 12px;
     text-transform: uppercase;
-  }
-  &_p {
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
-    color: $dark-shade-75;
-    line-height: 21px;
   }
 }
 
