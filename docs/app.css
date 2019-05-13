@@ -181,6 +181,14 @@ body {
       color: #1F2041; }
     .input__label_right {
       color: rgba(31, 32, 65, 0.5); }
+    .input__label_subscribe {
+      position: relative; }
+  .input__submit {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 3px;
+    top: 0; }
 
 .dropdown {
   margin-bottom: 20px; }
