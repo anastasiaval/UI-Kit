@@ -13,9 +13,10 @@ html(lang="en")
             div
                 form.form_wide
                     include components/input/input
-                    +input('Email', 'Text Field', 'Default')
-                    +input('This is pretty awesome', 'Text Field', 'Hover / Focus')
+                    +input({label_left: 'Text Field', label_right: 'Default', placeholder: 'Email'})
+                    +input({label_left: 'Text Field', label_right: 'Hover / Focus', placeholder: 'This is pretty awesome'})
                     include components/dropdown/dropdown
+                    +input({label_left: 'masked text field', label_right: 'Default', placeholder: 'ДД.ММ.ГГГГ', mod: 'date'})
             div
 
             div

@@ -1,8 +1,12 @@
-mixin input(placeholder, label_left, label_right)
+mixin input(options)
     label
         .input__label
-            span.input__label_left= label_left
-            if label_right
-                span.input__label_right= label_right
-        input.input(type='heading.pug', placeholder= placeholder)
+            span.input__label_left= options.label_left
+            if options.label_right
+                span.input__label_right= options.label_right
+        if options.mod
+            input.input(class= 'input_' + options.mod type='text', placeholder= options.placeholder)
+        else
+            input.input(type='text', placeholder= options.placeholder)
+
 
