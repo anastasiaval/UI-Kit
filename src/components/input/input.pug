@@ -1,12 +1,14 @@
 mixin input(options)
-    label
+    label(class= (options.labelMod ? 'input__label_' + options.labelMod : ''))
         .input__label
             span.input__label_left= options.label_left
             if options.label_right
                 span.input__label_right= options.label_right
         if options.mod
-            input.input(class= 'input_' + options.mod type='text', placeholder= options.placeholder)
+            input.input(class= 'input_' + options.mod type= options.type, placeholder= options.placeholder)
         else
-            input.input(type='text', placeholder= options.placeholder)
-
+            input.input(typ= options.type, placeholder= options.placeholder)
+        if options.labelMod === 'subscribe'
+            button.input__submit(type='submit')
+                i.material-icons.dropdown__icon_arrow arrow_forward
 

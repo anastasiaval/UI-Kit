@@ -1,12 +1,11 @@
 let $dropdown = $('.dropdown__default');
-let $expanded = $('.dropdown__expanded');
 let $apply = $('.dropdown__option_apply');
 
-$dropdown.on('click', () => {
-    $expanded.slideToggle(200);
+$dropdown.on('click', (e) => {
+    $(e.currentTarget).siblings('.dropdown__expanded').slideToggle(200);
 });
 
-$apply.on('click', () => {
-    $expanded.slideUp(200);
+$apply.on('click', (e) => {
+    $(e.currentTarget).closest('.dropdown__expanded').slideUp(200);
 });
 

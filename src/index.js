@@ -7,8 +7,8 @@ import 'components/type/type.scss';
 import 'components/heading/heading.scss';
 import 'components/input/input.scss';
 import 'components/dropdown/dropdown.scss';
+import 'components/subscription/subscription.scss';
 
-//require('inputmask');
 import 'components/dropdown/dropdown';
 import 'components/input/input';
 

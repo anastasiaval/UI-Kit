@@ -30,6 +30,16 @@
     &_right {
       color: $dark-shade-50;
     }
+    &_subscribe {
+      position: relative;
+    }
+  }
+  &__submit {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 3px;
+    top: 0;
   }
 }
 

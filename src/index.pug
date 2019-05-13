@@ -13,10 +13,49 @@ html(lang="en")
             div
                 form.form_wide
                     include components/input/input
-                    +input({label_left: 'Text Field', label_right: 'Default', placeholder: 'Email'})
-                    +input({label_left: 'Text Field', label_right: 'Hover / Focus', placeholder: 'This is pretty awesome'})
+                    +input({
+                        label_left: 'Text Field',
+                        label_right: 'Default',
+                        placeholder: 'Email',
+                        type: 'text'
+                    })
+                    +input({
+                        label_left: 'Text Field',
+                        label_right: 'Hover / Focus',
+                        placeholder: 'This is pretty awesome',
+                        type: 'text'
+                    })
                     include components/dropdown/dropdown
-                    +input({label_left: 'masked text field', label_right: 'Default', placeholder: 'ДД.ММ.ГГГГ', mod: 'date'})
+                    +dropdown({
+                        label_left: 'Dropdown',
+                        label_right: 'Default',
+                        defaultField: 'Сколько гостей',
+                        expanded: ['взрослые', 'дети', 'младенцы'],
+                        startCount: [0, 0, 0],
+                        applyBtn: true
+                    })
+                    +input({
+                        label_left: 'masked text field',
+                        label_right: 'Default',
+                        placeholder: 'ДД.ММ.ГГГГ',
+                        type: 'text',
+                        mod: 'date'})
+                form.form_narrow
+                    +input({
+                        label_left: 'subscription text field',
+                        placeholder: 'Email',
+                        type: 'email',
+                        labelMod: 'subscribe'
+                    })
+                form.form_narrow
+                    +dropdown({
+                        label_left: 'Dropdown',
+                        label_right: 'Default',
+                        defaultField: '2 спальни, 2 кровати...',
+                        expanded: ['спальни', 'кровати', 'ванные комнаты'],
+                        startCount: [2, 2, 0],
+                        applyBtn: false
+                    })
             div
 
             div
