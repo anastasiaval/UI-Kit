@@ -7,8 +7,9 @@ mixin input(options)
         if options.mod
             input.input(class= 'input_' + options.mod type= options.type, placeholder= options.placeholder)
         else
-            input.input(typ= options.type, placeholder= options.placeholder)
+            input.input(type= options.type, placeholder= options.placeholder)
         if options.labelMod === 'subscribe'
             button.input__submit(type='submit')
-                i.material-icons.dropdown__icon_arrow arrow_forward
-
+                i.material-icons.input__icon <arrow_forward></arrow_forward>
+        if options.labelMod === 'datepicker'
+            i.material-icons.input__icon keyboard_arrow_down

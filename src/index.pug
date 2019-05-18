@@ -40,6 +40,19 @@ html(lang="en")
                         placeholder: 'ДД.ММ.ГГГГ',
                         type: 'text',
                         mod: 'date'})
+                    .form__wrapper
+                        +input({
+                            label_left: 'date Dropdown',
+                            placeholder: 'ДД.ММ.ГГГГ',
+                            mod: 'datepicker',
+                            labelMod: 'datepicker'
+                        })
+                        +input({
+                            label_left: 'date Dropdown',
+                            placeholder: 'ДД.ММ.ГГГГ',
+                            mod: 'datepicker',
+                            labelMod: 'datepicker'
+                        })
                 form.form_narrow
                     +input({
                         label_left: 'subscription text field',
@@ -47,6 +60,11 @@ html(lang="en")
                         type: 'email',
                         labelMod: 'subscribe'
                     })
+            div
+
+            div
+        .content
+            div
                 form.form_narrow
                     +dropdown({
                         label_left: 'Dropdown',
@@ -56,7 +74,13 @@ html(lang="en")
                         startCount: [2, 2, 0],
                         applyBtn: false
                     })
+                    +dropdown({
+                        label_left: 'Dropdown',
+                        label_right: 'expanded',
+                        defaultField: '2 спальни, 2 кровати...',
+                        expanded: ['спальни', 'кровати', 'ванные комнаты'],
+                        startCount: [2, 2, 0],
+                        applyBtn: false
+                    })
             div
-
             div
-

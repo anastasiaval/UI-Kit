@@ -17,6 +17,9 @@
       color: $dark-shade-75;
     }
   }
+  &_datepicker {
+    width: 150px;
+  }
   &__label {
     display: flex;
     justify-content: space-between;
@@ -33,6 +36,9 @@
     &_subscribe {
       position: relative;
     }
+    &_datepicker {
+      position: relative;
+    }
   }
   &__submit {
     border: none;
@@ -40,6 +46,109 @@
     position: absolute;
     right: 3px;
     top: 0;
+    cursor: pointer;
+  }
+  &__icon {
+    position: absolute;
+    right: 3px;
+    top: 32px;
+    cursor: pointer;
+    color: $dark-shade-50;
   }
 }
+
+// custom datepicker
+
+.ui-datepicker {
+  width: 320px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  padding: 20px;
+  & a {
+    text-decoration: none;
+    color: $dark-shade-50;
+  }
+  & table {
+    width: 100%;
+  }
+  & thead {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: $purple;
+  }
+  & tbody td {
+    padding: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+  }
+}
+
+.ui-datepicker-title {
+  margin-bottom: 30px;
+  font-family: Montserrat-Bold, sans-serif;
+  text-align: center;
+  color: $dark-shade-100;
+  font-size: 19px;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  line-height: 600%;
+  overflow: hidden;
+  background-position: center 0;
+}
+
+.ui-datepicker-prev {
+  background-image: url('img/arrow_back.png');
+  float: left;
+}
+
+.ui-datepicker-next {
+  background-image: url('img/arrow_forward.png');
+  float: right;
+}
+
+.ui-datepicker-other-month span {
+  color: $dark-shade-25;
+}
+
+.ui-datepicker-buttonpane {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  line-height: 28px;
+}
+
+.ui-datepicker-current {
+  color: $dark-shade-50;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  text-transform: uppercase;
+  font-family: Montserrat-Bold, sans-serif;
+  font-size: 12px;
+}
+
+.ui-datepicker-close {
+  color: $purple;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  text-transform: uppercase;
+  font-family: Montserrat-Bold, sans-serif;
+  font-size: 12px;
+}
+
+// end of custom datepicker
 
