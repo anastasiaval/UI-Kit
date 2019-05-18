@@ -27,10 +27,10 @@
     cursor: pointer;
   }
   &__icon_arrow {
-    color: rgba(31, 32, 65, 0.5);
+    color: $dark-shade-50;
   }
   &__expanded {
-    border-top: 1px solid rgba(31, 32, 65, 0.25);
+    border-top: 1px solid $dark-shade-25;
     display: none;
     font-family: Montserrat-Bold, sans-serif;
     color: $dark-shade-100;

@@ -1,0 +1,13 @@
+.form {
+  &_wide {
+    width: 320px;
+  }
+  &_narrow {
+    width: 266px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
