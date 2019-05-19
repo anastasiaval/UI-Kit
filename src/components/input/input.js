@@ -47,6 +47,7 @@ $(function() {
     });
 
     $datepicker.on('focus', () => {
+        $('.ui-helper-clearfix').css('display', 'block');
         $('.ui-datepicker-current').on('click', function () {
             $datepicker.datepicker('setDate', null);
         });
