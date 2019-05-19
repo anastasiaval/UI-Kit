@@ -16,13 +16,16 @@ $(function() {
 // translation from https://github.com/jquery/jquery-ui/blob/master/ui/i18n/datepicker-ru.js
 $(function() {
     let $datepicker = $('.input_datepicker');
-    console.log($datepicker);
     $datepicker.datepicker({
         showButtonPanel: true,
         showOtherMonths: true,
+        selectOtherMonths: true,
+        minDate: 0,
+        duration: "fast",
+        showAnim: 'slideDown',
         closeText: "применить",
-        prevText: "&#x3C;Пред",
-        nextText: "След&#x3E;",
+        prevText: "",
+        nextText: "",
         currentText: "очистить",
         monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",
             "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],
@@ -43,13 +46,11 @@ $(function() {
         e.type === 'focus' ? $icon.text('keyboard_arrow_up') : $icon.text('keyboard_arrow_down');
     });
 
-    // $('.ui-datepicker-calendar').append([
-    //     $('<div/>',{class: "ui-datepicker-btn"}).append([
-    //         $('<span/>',{class: "clear-btn", text: 'очистить'}),
-    //         $('<span/>',{class: "apply-btn", text: 'применить'})
-    //     ])
-    // ]);
-
+    $datepicker.on('focus', () => {
+        $('.ui-datepicker-current').on('click', function () {
+            $datepicker.datepicker('setDate', null);
+        });
+    });
 
 });
 

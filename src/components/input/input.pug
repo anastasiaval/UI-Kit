@@ -10,6 +10,6 @@ mixin input(options)
             input.input(type= options.type, placeholder= options.placeholder)
         if options.labelMod === 'subscribe'
             button.input__submit(type='submit')
-                i.material-icons.input__icon <arrow_forward></arrow_forward>
+                i.material-icons.input__icon.input__icon_subscribe arrow_forward
         if options.labelMod === 'datepicker'
-            i.material-icons.input__icon keyboard_arrow_down
+            i.material-icons.input__icon.input__icon_datepicker keyboard_arrow_down
