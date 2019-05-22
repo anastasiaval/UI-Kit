@@ -12,4 +12,5 @@ import 'components/dropdown/dropdown.scss';
 require('jquery-ui-bundle');
 import 'components/dropdown/dropdown';
 import 'components/input/input';
+import 'components/input/datepicker-ext';
 

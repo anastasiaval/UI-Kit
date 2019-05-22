@@ -5,11 +5,15 @@ mixin input(options)
             if options.label_right
                 span.input__label_right= options.label_right
         if options.mod
-            input.input(class= 'input_' + options.mod type= options.type, placeholder= options.placeholder)
+            if options.mod === 'datepicker' || options.mod === 'filter-datepicker'
+                input.input(class= 'input_' + options.mod type= options.type, placeholder= options.placeholder readonly)
+            else
+                input.input(class= 'input_' + options.mod type= options.type, placeholder= options.placeholder)
         else
             input.input(type= options.type, placeholder= options.placeholder)
         if options.labelMod === 'subscribe'
             button.input__submit(type='submit')
                 i.material-icons.input__icon.input__icon_subscribe arrow_forward
-        if options.labelMod === 'datepicker'
-            i.material-icons.input__icon.input__icon_datepicker keyboard_arrow_down
+        if options.labelMod === 'datepicker' || options.labelMod === 'filter-datepicker'
+            i.material-icons.input__icon(class= 'input__icon_' + options.labelMod) keyboard_arrow_down
+

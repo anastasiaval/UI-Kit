@@ -13,10 +13,10 @@ $(function() {
 });
 
 // datepicker
-// translation from https://github.com/jquery/jquery-ui/blob/master/ui/i18n/datepicker-ru.js
-$(function() {
-    let $datepicker = $('.input_datepicker');
-    $datepicker.datepicker({
+require('jquery-ui-bundle');
+
+function datepicker($input, onSelect, format) {
+    $input.datepicker({
         showButtonPanel: true,
         showOtherMonths: true,
         selectOtherMonths: true,
@@ -35,23 +35,39 @@ $(function() {
         dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],
         dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],
         weekHeader: "Нед",
-        dateFormat: "dd.mm.yy",
         firstDay: 1,
         isRTL: false,
         showMonthAfterYear: false,
-        yearSuffix: "" });
-
-    $datepicker.on('focus blur', (e) => {
-        let $icon = $(e.currentTarget).siblings('.input__icon');
-        e.type === 'focus' ? $icon.text('keyboard_arrow_up') : $icon.text('keyboard_arrow_down');
+        yearSuffix: "",
+        range: 'period',
+        numberOfMonths: 1,
+        dateFormat: format,
+        onSelect: onSelect
     });
 
-    $datepicker.on('focus', () => {
-        $('.ui-helper-clearfix').css('display', 'block');
-        $('.ui-datepicker-current').on('click', function () {
-            $datepicker.datepicker('setDate', null);
-        });
+    $input.on('focus blur', (e) => {
+        let _gotoTodayOrig = $.datepicker._gotoToday;
+        e.type === 'focus' ?
+            $.datepicker._gotoToday = function () {
+                $input.datepicker('setDate', [null, null])
+            }
+            : $.datepicker._gotoToday = _gotoTodayOrig;
     });
+}
 
+$(function () {
+    const $datepicker = $('.form__wrapper').find('.input_datepicker');
+    const datepickerOnSelect = function(dateText, inst, extensionRange) {
+        $datepicker[0].value = extensionRange.startDateText;
+        $datepicker[1].value = extensionRange.endDateText;
+    };
+
+    const $filterDatepicker = $('.input_filter-datepicker');
+    const filterDatepickerOnSelect = function(dateText, inst, extensionRange) {
+        $filterDatepicker.val(extensionRange.startDateText + ' - ' + extensionRange.endDateText);
+    };
+
+    datepicker($datepicker, datepickerOnSelect, "dd.mm.yy");
+    datepicker($filterDatepicker, filterDatepickerOnSelect, "dd M");
 });
 

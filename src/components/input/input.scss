@@ -2,6 +2,7 @@
 
 .input {
   width: 100%;
+  outline: none;
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -20,6 +21,9 @@
   &_datepicker {
     width: 150px;
   }
+  &_filter-datepicker {
+    text-transform: lowercase;
+  }
   &__label {
     display: flex;
     justify-content: space-between;
@@ -37,6 +41,9 @@
       position: relative;
     }
     &_datepicker {
+      position: relative;
+    }
+    &_filter-datepicker {
       position: relative;
     }
   }
@@ -61,6 +68,9 @@
     &_subscribe {
       top: -2px;
     }
+    &_filter-datepicker {
+      //top: 1px;
+    }
   }
 }
 
@@ -76,10 +86,15 @@
 }
 
 .ui-datepicker-calendar {
-  width: 100%;
+  width: 280px;
+  margin: auto;
+  border-spacing: 0;
   & thead {
     font-size: 12px;
     color: $purple;
+  }
+  & tbody {
+    width: 280px;
   }
   & tbody td {
     font-size: 12px;
@@ -114,9 +129,12 @@
   display: inline-block;
   width: 24px;
   height: 24px;
-  cursor: pointer;
   background-repeat: no-repeat;
   background-position: center 0;
+}
+
+.ui-datepicker-prev:not(.ui-state-disabled), .ui-datepicker-next {
+  cursor: pointer;
 }
 
 .ui-datepicker-prev {
@@ -131,11 +149,6 @@
 
 .ui-datepicker-today a {
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-  border-radius: 22px;
-}
-
-.ui-state-active {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
 }
 
@@ -162,6 +175,47 @@
 
 .ui-datepicker-close {
   color: $purple;
+}
+
+.selected-start a, .selected-end a {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) !important;
+  border-radius: 22px;
+  color: #FFFFFF !important;
+  position: relative;
+}
+
+.selected-start:not(.selected-end) a:before {
+  content: '';
+  height: 40px;
+  width: 40px;
+  top: 0;
+  left: 0;
+  border-radius: 22px 0 0 22px;
+  background: $dark-shade-5;
+  position: absolute;
+}
+
+.selected-end:not(.selected-start) a:before {
+  content: '';
+  height: 40px;
+  width: 40px;
+  top: 0;
+  left: 0;
+  border-radius: 0 22px 22px 0;
+  background: $dark-shade-5;
+  position: absolute;
+}
+
+.selected-start, .selected-end {
+  background: none !important;
+}
+
+.selected a {
+  color: $purple;
+}
+
+.selected {
+  background: $dark-shade-5;
 }
 
 // end of custom datepicker
