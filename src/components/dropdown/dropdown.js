@@ -3,9 +3,11 @@ let $apply = $('.dropdown__option_apply');
 
 $dropdown.on('click', (e) => {
     $(e.currentTarget).siblings('.dropdown__expanded').slideToggle(200);
+    $(e.currentTarget).toggleClass('dropdown__default_exp');
 });
 
 $apply.on('click', (e) => {
     $(e.currentTarget).closest('.dropdown__expanded').slideUp(200);
+    $(e.currentTarget).toggleClass('dropdown__default_exp');
 });
 

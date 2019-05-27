@@ -68,9 +68,6 @@
     &_subscribe {
       top: -2px;
     }
-    &_filter-datepicker {
-      //top: 1px;
-    }
   }
 }
 
@@ -78,6 +75,7 @@
 
 .ui-datepicker {
   width: 320px;
+  margin-top: 5px;
   background: #FFFFFF;
   border: 1px solid $dark-shade-25;
   box-shadow: 0 10px 20px $dark-shade-5;
