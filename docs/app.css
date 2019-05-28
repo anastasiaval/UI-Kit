@@ -60,6 +60,9 @@ body {
 .ui-helper-clearfix {
   display: none; }
 
+.ui-datepicker-header {
+  display: block; }
+
 
 .logo {
   position: absolute;
@@ -144,12 +147,16 @@ body {
 .form_narrow {
   width: 266px; }
 
+.form_box {
+  margin-bottom: 40px; }
+
 .form__wrapper {
   display: flex;
   justify-content: space-between; }
 
 .input {
   width: 100%;
+  outline: none;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   margin-bottom: 20px;
@@ -179,6 +186,8 @@ body {
     color: rgba(31, 32, 65, 0.75); }
   .input_datepicker {
     width: 150px; }
+  .input_filter-datepicker {
+    text-transform: lowercase; }
   .input__label {
     display: flex;
     justify-content: space-between;
@@ -193,6 +202,8 @@ body {
     .input__label_subscribe {
       position: relative; }
     .input__label_datepicker {
+      position: relative; }
+    .input__label_filter-datepicker {
       position: relative; }
   .input__submit {
     border: none;
@@ -215,6 +226,7 @@ body {
 
 .ui-datepicker {
   width: 320px;
+  margin-top: 5px;
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
@@ -222,10 +234,14 @@ body {
   padding: 20px 10px; }
 
 .ui-datepicker-calendar {
-  width: 100%; }
+  width: 280px;
+  margin: auto;
+  border-spacing: 0; }
   .ui-datepicker-calendar thead {
     font-size: 12px;
     color: #BC9CFF; }
+  .ui-datepicker-calendar tbody {
+    width: 280px; }
   .ui-datepicker-calendar tbody td {
     font-size: 12px;
     text-align: center; }
@@ -253,9 +269,11 @@ body {
   display: inline-block;
   width: 24px;
   height: 24px;
-  cursor: pointer;
   background-repeat: no-repeat;
   background-position: center 0; }
+
+.ui-datepicker-prev:not(.ui-state-disabled), .ui-datepicker-next {
+  cursor: pointer; }
 
 .ui-datepicker-prev {
   background-image: url(img/arrow_back.png);
@@ -267,10 +285,6 @@ body {
 
 .ui-datepicker-today a {
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-  border-radius: 22px; }
-
-.ui-state-active {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px; }
 
 .ui-datepicker-buttonpane {
@@ -294,6 +308,41 @@ body {
 .ui-datepicker-close {
   color: #BC9CFF; }
 
+.selected-start a, .selected-end a {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) !important;
+  border-radius: 22px;
+  color: #FFFFFF !important;
+  position: relative; }
+
+.selected-start:not(.selected-end) a:before {
+  content: '';
+  height: 40px;
+  width: 40px;
+  top: 0;
+  left: 0;
+  border-radius: 22px 0 0 22px;
+  background: rgba(31, 32, 65, 0.05);
+  position: absolute; }
+
+.selected-end:not(.selected-start) a:before {
+  content: '';
+  height: 40px;
+  width: 40px;
+  top: 0;
+  left: 0;
+  border-radius: 0 22px 22px 0;
+  background: rgba(31, 32, 65, 0.05);
+  position: absolute; }
+
+.selected-start, .selected-end {
+  background: none !important; }
+
+.selected a {
+  color: #BC9CFF; }
+
+.selected {
+  background: rgba(31, 32, 65, 0.05); }
+
 .dropdown {
   margin-bottom: 20px; }
   .dropdown__label {
@@ -308,17 +357,27 @@ body {
     .dropdown__label_right {
       color: rgba(31, 32, 65, 0.5); }
   .dropdown__field {
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 4px; }
+    position: relative; }
   .dropdown__default {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
     padding: 11px 8px 7px 15px;
     display: flex;
     justify-content: space-between;
     cursor: pointer; }
+    .dropdown__default_exp {
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      border-radius: 4px 4px 0 0;
+      border-bottom: none; }
   .dropdown__icon_arrow {
     color: rgba(31, 32, 65, 0.5); }
   .dropdown__expanded {
-    border-top: 1px solid rgba(31, 32, 65, 0.25);
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 0 0 4px 4px;
     display: none;
     font-family: Montserrat-Bold, sans-serif;
     color: #1F2041;
@@ -360,4 +419,141 @@ body {
       width: 30px;
       text-align: center;
       cursor: pointer; }
+
+.toggle {
+  cursor: pointer;
+  display: block;
+  margin-top: 16px; }
+  .toggle__input {
+    display: none; }
+    .toggle__input:checked + .toggle__box {
+      border-color: #BC9CFF; }
+      .toggle__input:checked + .toggle__box:after {
+        left: 20px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+  .toggle__box {
+    position: relative;
+    display: block;
+    float: left;
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: border-color 0.2s; }
+    .toggle__box:after {
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: rgba(31, 32, 65, 0.25);
+      border-radius: 10px;
+      margin: 3px;
+      left: 0;
+      transition: background 0.2s, left 0.2s; }
+
+.radio {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 16px;
+  color: rgba(31, 32, 65, 0.5); }
+  .radio__input {
+    display: none; }
+    .radio__input:checked ~ .radio__label {
+      color: rgba(31, 32, 65, 0.75); }
+    .radio__input:checked ~ .radio__box {
+      border-color: #BC9CFF; }
+      .radio__input:checked ~ .radio__box:after {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+  .radio__box {
+    position: relative;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: border-color 0.2s; }
+    .radio__box:after {
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 12px;
+      border-radius: 10px;
+      margin: 3px;
+      transition: background 0.2s; }
+
+.checkbox {
+  cursor: pointer;
+  display: block;
+  margin-top: 16px;
+  color: rgba(31, 32, 65, 0.5); }
+  .checkbox__input {
+    display: none; }
+    .checkbox__input:checked + .checkbox__box {
+      border-color: #BC9CFF; }
+      .checkbox__input:checked + .checkbox__box .checkbox__check {
+        visibility: visible;
+        opacity: 1; }
+  .checkbox__box {
+    position: relative;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: border-color 0.2s; }
+  .checkbox__check {
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.2s;
+    opacity: 0;
+    position: absolute;
+    height: 8px;
+    width: 6px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    margin: 5px 6px;
+    transform: rotate(45deg); }
+    .checkbox__check_cover {
+      position: absolute;
+      height: 6px;
+      width: 4px;
+      top: -1px;
+      left: 1px;
+      background: #FFFFFF;
+      margin: 5px 6px;
+      transform: rotate(45deg); }
+
+.like-btn {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background: rgba(31, 32, 65, 0.25);
+  margin: 16px 10px 16px 0;
+  cursor: pointer;
+  outline: none;
+  border: none; }
+  .like-btn_liked {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+    .like-btn_liked .like-btn__bg {
+      color: #BC9CFF; }
+  .like-btn__bg {
+    position: relative;
+    background: #FFFFFF;
+    display: block;
+    width: 36px;
+    height: 16px;
+    border-radius: 8px;
+    margin: auto;
+    padding: 2px 0 0 8px;
+    font-size: 10px;
+    color: rgba(31, 32, 65, 0.25); }
+  .like-btn__icon {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-size: 10px; }
 
