@@ -1,0 +1,7 @@
+mixin checkbox(text, checked)
+    label.checkbox
+        input.checkbox__input(type='checkbox' checked=(checked ? 'checked' : false))
+        span.checkbox__box
+            span.checkbox__check
+            span.checkbox__check_cover
+        |   !{text}
