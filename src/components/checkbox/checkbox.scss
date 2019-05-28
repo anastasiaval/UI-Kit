@@ -4,6 +4,7 @@
   cursor: pointer;
   display: block;
   margin-top: 16px;
+  color: $dark-shade-50;
   &__input{
     display: none;
     &:checked + .checkbox__box {

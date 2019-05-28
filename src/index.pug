@@ -66,8 +66,30 @@ html(lang="en")
                         labelMod: 'subscribe'
                     })
             div
-
+                form.form_box.form_narrow
+                    +heading('h3', 'Checkbox Buttons')
+                    include components/checkbox/checkbox
+                    +checkbox('Можно курить', false)
+                    +checkbox('Можно с питомцами', true)
+                    +checkbox('Можно пригласить гостей (до 10 человек)', true)
+                form.form_box
+                    +heading('h3', 'Radio buttons')
+                    include components/radio/radio
+                    +radio('gender', 'male', 'Мужчина', true)
+                    +radio('gender', 'female', 'Женщина', false)
+                form.form_box
+                    +heading('h3', 'Toggle')
+                    include components/toggle/toggle
+                    +toggle('Получать спецпредложения')
+                    +toggle('Получать спецпредложения')
+                .form_box
+                    +heading('h3', 'Like button')
+                    include components/like-btn/like-btn
+                    +like(2)
+                    +like(11)
             div
+                .form_box
+                    +heading('h3', 'buttons')
         .content
             div
                 form.form_narrow
