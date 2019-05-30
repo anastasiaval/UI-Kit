@@ -12,6 +12,7 @@ import 'components/toggle/toggle.scss';
 import 'components/radio/radio.scss';
 import 'components/checkbox/checkbox.scss';
 import 'components/like-btn/like-btn.scss';
+import 'components/button/button.scss';
 
 require('jquery-ui-bundle');
 import 'components/dropdown/dropdown';

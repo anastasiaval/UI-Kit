@@ -90,6 +90,18 @@ html(lang="en")
             div
                 .form_box
                     +heading('h3', 'buttons')
+                    include components/button/button
+                    div
+                        +button({type: 'bg', text: 'click me'})
+                        +button({type: 'bg', text: 'click me'})
+                    div
+                        +button({type: 'border', text: 'click me'})
+                        +button({type: 'border', text: 'click me'})
+                    div
+                        +button({type: 'btn', text: 'click me'})
+                        +button({type: 'btn', text: 'click me'})
+                    form.form_wide
+                        +button({type: 'submit', text: 'перейти к оплате'})
         .content
             div
                 form.form_narrow
