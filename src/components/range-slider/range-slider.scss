@@ -1,0 +1,55 @@
+@import "../../assets/variables";
+
+.range-slider {
+  margin-top: 23px;
+}
+
+// custom ui slider
+.ui-corner-all {
+  border-radius: 10px;
+}
+
+.ui-widget-content {
+  border: 1px solid $dark-shade-25;
+  border-radius: 3px;
+}
+
+.ui-slider-horizontal {
+  height: 6px;
+}
+
+.ui-slider {
+  position: relative;
+}
+
+.ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  height: 6px;
+}
+
+.ui-widget-header {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.ui-state-default, .ui-button, .ui-button.ui-state-disabled:hover, .ui-button.ui-state-disabled:active {
+  border: 1px solid #c5c5c5;
+  background: #f6f6f6;
+  color: #454545;
+}
+
+.ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 12px;
+  height: 12px;
+  cursor: default;
+  touch-action: none;
+  top: -4px;
+  margin-left: -8px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  outline: none;
+}
+

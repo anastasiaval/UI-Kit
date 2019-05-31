@@ -13,10 +13,13 @@ import 'components/radio/radio.scss';
 import 'components/checkbox/checkbox.scss';
 import 'components/like-btn/like-btn.scss';
 import 'components/button/button.scss';
+import 'components/range-slider/range-slider.scss';
 
 require('jquery-ui-bundle');
 import 'components/dropdown/dropdown';
 import 'components/input/input';
 import 'components/input/datepicker-ext';
 import 'components/like-btn/like-btn';
+import 'components/range-slider/range-slider';
+import 'components/range-slider/jQueryUI-TouchPunch';
 
