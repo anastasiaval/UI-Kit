@@ -1,0 +1,14 @@
+.rate {
+  margin-top: 16px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-clip: text;
+  i {
+    display: inline;
+    color: transparent;
+    cursor: pointer;
+  }
+  .selected {
+    background: none;
+  }
+}
+

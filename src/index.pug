@@ -87,6 +87,12 @@ html(lang="en")
                     include components/like-btn/like-btn
                     +like(2)
                     +like(11)
+                .form_box
+                    +heading('h3', 'rate button')
+                    .form__wrapper
+                        include components/rate-btn/rate-btn
+                        +rate('rate-1')
+                        +rate('rate-10')
             div
                 .form_box.form_narrow
                     include components/range-slider/range-slider
@@ -104,6 +110,9 @@ html(lang="en")
                         +button({type: 'btn', text: 'click me'})
                     form.form_wide
                         +button({type: 'submit', text: 'перейти к оплате'})
+                .form_box
+                    +heading('h3', 'pagination')
+                    include components/pagination/pagination
         .content
             div
                 form.form_narrow
