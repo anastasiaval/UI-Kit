@@ -14,8 +14,8 @@ import 'components/checkbox/checkbox.scss';
 import 'components/like-btn/like-btn.scss';
 import 'components/button/button.scss';
 import 'components/range-slider/range-slider.scss';
-import 'components/pagination/pagination.scss';
 import 'components/rate-btn/rate-btn.scss';
+import 'components/pagination/pagination.scss';
 
 require('jquery-ui-bundle');
 import 'components/dropdown/dropdown';
@@ -26,4 +26,6 @@ import 'components/range-slider/range-slider';
 import 'components/range-slider/jQueryUI-TouchPunch';
 import 'components/rate-btn/rate-btn';
 import 'components/rate-btn/star-rating-plugin';
+import 'components/pagination/pagination-plugin';
+import 'components/pagination/pagination';
 
