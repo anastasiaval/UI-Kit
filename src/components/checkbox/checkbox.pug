@@ -1,7 +1,12 @@
-mixin checkbox(text, checked)
+mixin checkbox(options)
     label.checkbox
         input.checkbox__input(type='checkbox' checked=(checked ? 'checked' : false))
-        span.checkbox__box
-            span.checkbox__check
-            span.checkbox__check_cover
-        |   !{text}
+        .checkbox__wrapper
+            span.checkbox__box
+                span.checkbox__check
+                span.checkbox__check_cover
+            .checkbox__text
+                if (options.mod === 'rich')
+                    h4.checkbox__text_h4 !{options.darkText}
+                p(class= (options.mod ? 'checkbox__text_' + options.mod : 'checkbox__text_p')) !{options.text}
+

@@ -1,0 +1,24 @@
+@import "../../assets/variables";
+
+.bullet-list {
+  list-style-type: none;
+  margin-top: 20px;
+  margin-left: 20px;
+  &__item {
+    line-height: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 7px;
+      left: -20px;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $dark-shade-25;
+      margin-right: 10px;
+    }
+  }
+}
+

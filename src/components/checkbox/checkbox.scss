@@ -4,16 +4,32 @@
   cursor: pointer;
   display: block;
   margin-top: 16px;
-  color: $dark-shade-50;
   &__input{
     display: none;
-    &:checked + .checkbox__box {
+    &:checked ~ .checkbox__wrapper .checkbox__box {
       border-color: #BC9CFF;
       .checkbox__check {
         visibility: visible;
         opacity: 1;
       }
     }
+  }
+  &__text {
+    width: 90%;
+    &_h4 {
+      font-family: Montserrat-Bold, sans-serif;
+      color: $dark-shade-75;
+    }
+    &_p {
+      color: $dark-shade-50;
+    }
+    &_rich {
+      color: $dark-shade-50;
+      font-size: 12px;
+    }
+  }
+  &__wrapper {
+    display: flex;
   }
   &__box {
     position: relative;

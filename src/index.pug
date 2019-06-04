@@ -69,9 +69,9 @@ html(lang="en")
                 form.form_box.form_narrow
                     +heading('h3', 'Checkbox Buttons')
                     include components/checkbox/checkbox
-                    +checkbox('Можно курить', false)
-                    +checkbox('Можно с питомцами', true)
-                    +checkbox('Можно пригласить гостей (до 10 человек)', true)
+                    +checkbox({text: 'Можно курить', checked: false})
+                    +checkbox({text: 'Можно с питомцами', checked: true})
+                    +checkbox({text: 'Можно пригласить гостей (до&nbsp;10&nbsp;человек)', checked: true})
                 form.form_box
                     +heading('h3', 'Radio buttons')
                     include components/radio/radio
@@ -133,4 +133,44 @@ html(lang="en")
                         applyBtn: false
                     })
             div
-            div
+                .ui-kit-wrapper
+                    .form_wide
+                        +dropdown({
+                            label_left: 'Dropdown',
+                            defaultField: 'Сколько гостей',
+                            expanded: ['взрослые', 'дети', 'младенцы'],
+                            startCount: [0, 0, 0],
+                            applyBtn: true
+                        })
+                    .form_wide
+                        +dropdown({
+                            label_left: 'Dropdown',
+                            defaultField: 'Сколько гостей',
+                            expanded: ['взрослые', 'дети', 'младенцы'],
+                            startCount: [0, 0, 0],
+                            applyBtn: true
+                        })
+                .ui-kit-wrapper
+                    .form_narrow
+                        +heading('h3', 'Rich Checkbox Buttons')
+                        +checkbox({
+                            text: 'Ширина коридоров в&nbsp;номере не&nbsp;менее 91&nbsp;см.',
+                            checked: false,
+                            mod: 'rich',
+                            darkText: 'Широкий коридор'})
+                        +checkbox({
+                            text: 'На&nbsp;1&nbsp;этаже вас встретит специалист и&nbsp;проводит до&nbsp;номера.',
+                            checked: false,
+                            mod: 'rich',
+                            darkText: 'Помощник для инвалидов'
+                        })
+                    .form_narrow
+                        +heading('h3', 'Bullet List')
+                        include components/bullet-list/bullet-list
+                        +bullet-list([
+                            'Нельзя с&nbsp;питомцами',
+                            'Без вечеринок и&nbsp;мероприятий',
+                            'Время прибытия&nbsp;&mdash; после 13:00, а&nbsp;выезд до&nbsp;12:00'
+                        ])
+                div
+                    p review

@@ -2,8 +2,8 @@ $(function() {
 
     $('.pagination').pagination({
         dataSource: function () {
-            var result = [];
-            for (var i = 1; i < 170; i++) {
+            let result = [];
+            for (let i = 1; i < 170; i++) {
                 result.push(i);
             }
             return result;
