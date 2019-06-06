@@ -1,6 +1,9 @@
-mixin like(likes)
-    button.like-btn
+mixin like(options)
+    button.like-btn(class= (options.isLiked ? 'like-btn_liked' : ''))
         span.like-btn__bg
-            i.material-icons.like-btn__icon favorite_border
-            span.like-btn__num= likes
+            if (options.isLiked)
+                i.material-icons.like-btn__icon favorite
+            else
+                i.material-icons.like-btn__icon favorite_border
+            span.like-btn__num= options.likes
 
