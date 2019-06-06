@@ -19,6 +19,7 @@ import 'components/pagination/pagination.scss';
 import 'components/bullet-list/bullet-list.scss';
 import 'components/review/review.scss';
 import 'components/room-info/room-info.scss';
+import 'components/checkbox-expandable/checkbox-expandable.scss';
 
 require('jquery-ui-bundle');
 import 'components/dropdown/dropdown';
@@ -31,4 +32,5 @@ import 'components/rate-btn/rate-btn';
 import 'components/rate-btn/star-rating-plugin';
 import 'components/pagination/pagination-plugin';
 import 'components/pagination/pagination';
+import 'components/checkbox-expandable/checkbox-expandable';
 

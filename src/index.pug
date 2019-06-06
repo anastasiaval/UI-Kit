@@ -132,6 +132,34 @@ html(lang="en")
                         startCount: [2, 2, 0],
                         applyBtn: false
                     })
+                .form_narrow
+                    include components/checkbox-expandable/checkbox-expandable
+                    +checkbox-exp({
+                        title: 'expandable checkbox list',
+                        arr: [
+                            {text: 'Завтрак', checked: false},
+                            {text: 'Письменный стол', checked: true},
+                            {text: 'Стул для кормления', checked: true},
+                            {text: 'Кроватка', checked: true},
+                            {text: 'Телевизор', checked: false},
+                            {text: 'Шампунь', checked: false},
+                            {text: 'Телевизор', checked: false},
+                            {text: 'Шампунь', checked: false},
+                        ]
+                    })
+                    +checkbox-exp({
+                        title: 'expandable checkbox list',
+                        arr: [
+                            {text: 'Завтрак', checked: false},
+                            {text: 'Письменный стол', checked: true},
+                            {text: 'Стул для кормления', checked: true},
+                            {text: 'Кроватка', checked: true},
+                            {text: 'Телевизор', checked: false},
+                            {text: 'Шампунь', checked: false},
+                            {text: 'Телевизор', checked: false},
+                            {text: 'Шампунь', checked: false},
+                        ]
+                    })
                 include components/room-info/room-info
                 +room-info({icon: 'mood', heading: 'Комфорт', text: 'Шумопоглощающие стены'})
                 +room-info({icon: 'location_city', heading: 'Удобство', text: 'Окно в каждой из спален'})

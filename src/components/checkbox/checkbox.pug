@@ -1,6 +1,6 @@
 mixin checkbox(options)
     label.checkbox
-        input.checkbox__input(type='checkbox' checked=(checked ? 'checked' : false))
+        input.checkbox__input(type='checkbox' checked=(options.checked ? 'checked' : false))
         .checkbox__wrapper
             span.checkbox__box
                 span.checkbox__check

@@ -1,0 +1,10 @@
+include ../../components/checkbox/checkbox
+include ../../components/heading/heading
+mixin checkbox-exp(options)
+    .checkbox-exp
+        +heading('h3', options.title)
+        i.material-icons.checkbox-exp__icon keyboard_arrow_down
+    .checkbox-exp__options
+        each val in options.arr
+            +checkbox(val)
+
