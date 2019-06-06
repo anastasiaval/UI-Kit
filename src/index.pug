@@ -80,8 +80,8 @@ html(lang="en")
                 form.form_box
                     +heading('h3', 'Toggle')
                     include components/toggle/toggle
-                    +toggle('Получать спецпредложения')
-                    +toggle('Получать спецпредложения')
+                    +toggle({text: 'Получать спецпредложения', checked: true})
+                    +toggle({text: 'Получать спецпредложения', checked: false})
                 .form_box
                     +heading('h3', 'Like button')
                     include components/like-btn/like-btn
