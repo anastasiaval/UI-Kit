@@ -85,8 +85,8 @@ html(lang="en")
                 .form_box
                     +heading('h3', 'Like button')
                     include components/like-btn/like-btn
-                    +like(2)
-                    +like(11)
+                    +like({likes: 2, isLiked: false})
+                    +like({likes: 12, isLiked: true})
                 .form_box
                     +heading('h3', 'rate button')
                     .form__wrapper
@@ -132,6 +132,10 @@ html(lang="en")
                         startCount: [2, 2, 0],
                         applyBtn: false
                     })
+                include components/room-info/room-info
+                +room-info({icon: 'mood', heading: 'Комфорт', text: 'Шумопоглощающие стены'})
+                +room-info({icon: 'location_city', heading: 'Удобство', text: 'Окно в каждой из спален'})
+
             div
                 .ui-kit-wrapper
                     .form_wide
@@ -173,4 +177,12 @@ html(lang="en")
                             'Время прибытия&nbsp;&mdash; после 13:00, а&nbsp;выезд до&nbsp;12:00'
                         ])
                 div
-                    p review
+                    include components/review/review
+                    +review({
+                        img: '/murad2.png',
+                        name: 'Мурад Сарафанов',
+                        daysAgo: 5,
+                        likes: 12,
+                        isLiked: true,
+                        text: 'Великолепный матрас на&nbsp;кровати в&nbsp;основной спальне! А&nbsp;пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару&nbsp;&mdash; никто не&nbsp;жаловался из&nbsp;соседей.'
+                    })

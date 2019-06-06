@@ -1,0 +1,10 @@
+include ../../components/like-btn/like-btn
+mixin review(options)
+    .review
+        .review__img
+            img.review__img__avatar(src=require('components/review/img' + options.img), alt='review')
+            +like({likes: options.likes, isLiked: options.isLiked})
+        .review__text
+            p.review__text_name= options.name
+            p.review__text_days= options.daysAgo + ' дней назад'
+            p.review__text_body !{options.text}

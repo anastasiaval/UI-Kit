@@ -17,6 +17,8 @@ import 'components/range-slider/range-slider.scss';
 import 'components/rate-btn/rate-btn.scss';
 import 'components/pagination/pagination.scss';
 import 'components/bullet-list/bullet-list.scss';
+import 'components/review/review.scss';
+import 'components/room-info/room-info.scss';
 
 require('jquery-ui-bundle');
 import 'components/dropdown/dropdown';

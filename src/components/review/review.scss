@@ -1,0 +1,23 @@
+.review {
+  display: flex;
+  &__img {
+    text-align: center;
+    &__avatar {
+      display: block;
+      box-sizing: border-box;border-radius: 32px;
+      box-shadow: 0 10px 20px rgba(31, 32, 65, 0.1);
+      margin-bottom: 12px;
+    }
+  }
+  &__text {
+    padding: 1px 0 0 10px;
+    line-height: 24px;
+    width: 700px;
+    &_name {
+      font-family: Montserrat-Bold, sans-serif;
+    }
+    &_body {
+      margin-top: 10px;
+    }
+  }
+}
