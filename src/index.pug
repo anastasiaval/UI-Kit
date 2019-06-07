@@ -27,12 +27,15 @@ html(lang="en")
                     })
                     include components/dropdown/dropdown
                     +dropdown({
-                        label_left: 'Dropdown',
-                        label_right: 'Default',
-                        defaultField: 'Сколько гостей',
-                        expanded: ['взрослые', 'дети', 'младенцы'],
-                        startCount: [0, 0, 0],
-                        applyBtn: true
+                        title: 'Dropdown',
+                        extraTitle: 'Default',
+                        defaultText: 'Сколько гостей',
+                        arr: [
+                            {item: 'взрослые', num: 0},
+                            {item: 'дети', num: 0},
+                            {item: 'младенцы', num: 0},
+                        ],
+                        buttons: true
                     })
                     +input({
                         label_left: 'masked text field',
@@ -67,28 +70,28 @@ html(lang="en")
                     })
             div
                 form.form_box.form_narrow
-                    +heading('h3', 'Checkbox Buttons')
+                    +text('h3', 'Checkbox Buttons', 'label')
                     include components/checkbox/checkbox
                     +checkbox({text: 'Можно курить', checked: false})
                     +checkbox({text: 'Можно с питомцами', checked: true})
                     +checkbox({text: 'Можно пригласить гостей (до&nbsp;10&nbsp;человек)', checked: true})
                 form.form_box
-                    +heading('h3', 'Radio buttons')
+                    +text('h3', 'Radio buttons', 'label')
                     include components/radio/radio
                     +radio('gender', 'male', 'Мужчина', true)
                     +radio('gender', 'female', 'Женщина', false)
                 form.form_box
-                    +heading('h3', 'Toggle')
+                    +text('h3', 'Toggle', 'label')
                     include components/toggle/toggle
                     +toggle({text: 'Получать спецпредложения', checked: true})
                     +toggle({text: 'Получать спецпредложения', checked: false})
                 .form_box
-                    +heading('h3', 'Like button')
+                    +text('h3', 'Like button', 'label')
                     include components/like-btn/like-btn
                     +like({likes: 2, isLiked: false})
                     +like({likes: 12, isLiked: true})
                 .form_box
-                    +heading('h3', 'rate button')
+                    +text('h3', 'rate button', 'label')
                     .form__wrapper
                         include components/rate-btn/rate-btn
                         +rate('rate-1')
@@ -97,7 +100,7 @@ html(lang="en")
                 .form_box.form_narrow
                     include components/range-slider/range-slider
                 .form_box
-                    +heading('h3', 'buttons')
+                    +text('h3', 'buttons', 'label')
                     include components/button/button
                     div
                         +button({type: 'bg', text: 'click me'})
@@ -111,26 +114,32 @@ html(lang="en")
                     form.form_wide
                         +button({type: 'submit', text: 'перейти к оплате'})
                 .form_box
-                    +heading('h3', 'pagination')
+                    +text('h3', 'pagination', 'label')
                     include components/pagination/pagination
         .content
             div
                 form.form_narrow
                     +dropdown({
-                        label_left: 'Dropdown',
-                        label_right: 'Default',
-                        defaultField: '2 спальни, 2 кровати...',
-                        expanded: ['спальни', 'кровати', 'ванные комнаты'],
-                        startCount: [2, 2, 0],
-                        applyBtn: false
+                        title: 'Dropdown',
+                        extraTitle: 'Default',
+                        defaultText: '2 спальни, 2 кровати...',
+                        arr: [
+                            {item: 'спальни', num: 2},
+                            {item: 'кровати', num: 2},
+                            {item: 'ванные комнаты', num: 0},
+                        ],
+                        buttons: false
                     })
                     +dropdown({
-                        label_left: 'Dropdown',
-                        label_right: 'expanded',
-                        defaultField: '2 спальни, 2 кровати...',
-                        expanded: ['спальни', 'кровати', 'ванные комнаты'],
-                        startCount: [2, 2, 0],
-                        applyBtn: false
+                        title: 'Dropdown',
+                        extraTitle: 'expanded',
+                        defaultText: '2 спальни, 2 кровати...',
+                        arr: [
+                            {item: 'спальни', num: 2},
+                            {item: 'кровати', num: 2},
+                            {item: 'ванные комнаты', num: 0},
+                        ],
+                        buttons: false
                     })
                 .form_narrow
                     include components/checkbox-expandable/checkbox-expandable
@@ -168,23 +177,29 @@ html(lang="en")
                 .ui-kit-wrapper
                     .form_wide
                         +dropdown({
-                            label_left: 'Dropdown',
-                            defaultField: 'Сколько гостей',
-                            expanded: ['взрослые', 'дети', 'младенцы'],
-                            startCount: [0, 0, 0],
-                            applyBtn: true
+                            title: 'Dropdown',
+                            defaultText: 'Сколько гостей',
+                            arr: [
+                                {item: 'взрослые', num: 0},
+                                {item: 'дети', num: 0},
+                                {item: 'младенцы', num: 0},
+                            ],
+                            buttons: true
                         })
                     .form_wide
                         +dropdown({
-                            label_left: 'Dropdown',
-                            defaultField: 'Сколько гостей',
-                            expanded: ['взрослые', 'дети', 'младенцы'],
-                            startCount: [0, 0, 0],
-                            applyBtn: true
+                            title: 'Dropdown',
+                            defaultText: 'Сколько гостей',
+                            arr: [
+                                {item: 'взрослые', num: 0},
+                                {item: 'дети', num: 0},
+                                {item: 'младенцы', num: 0},
+                            ],
+                            buttons: true
                         })
                 .ui-kit-wrapper
                     .form_narrow
-                        +heading('h3', 'Rich Checkbox Buttons')
+                        +text('h3', 'Rich Checkbox Buttons', 'label')
                         +checkbox({
                             text: 'Ширина коридоров в&nbsp;номере не&nbsp;менее 91&nbsp;см.',
                             checked: false,
@@ -197,7 +212,7 @@ html(lang="en")
                             darkText: 'Помощник для инвалидов'
                         })
                     .form_narrow
-                        +heading('h3', 'Bullet List')
+                        +text('h3', 'Bullet List', 'label')
                         include components/bullet-list/bullet-list
                         +bullet-list([
                             'Нельзя с&nbsp;питомцами',

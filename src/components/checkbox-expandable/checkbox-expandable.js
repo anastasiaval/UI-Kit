@@ -1,6 +1,6 @@
 $(function () {
     let $checkboxExp = $('.checkbox-exp');
-    $checkboxExp.on('click', (e) => {
+    $checkboxExp.on('click', e => {
         let $icon = $(e.currentTarget).find('.checkbox-exp__icon');
         $icon.text() === 'keyboard_arrow_down' ? $icon.text('keyboard_arrow_up') : $icon.text('keyboard_arrow_down');
 
