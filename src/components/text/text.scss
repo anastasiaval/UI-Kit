@@ -1,19 +1,19 @@
 @import "../../assets/variables";
 
-.heading {
+.text {
   color: $dark-shade-100;
-  &_h1 {
+  &_title {
     font-family: Quicksand-Bold, sans-serif;
     font-size: 24px;
     letter-spacing: -0.5px;
     line-height: 30px;
   }
-  &_h2 {
+  &_item-title {
     font-family: Quicksand-Bold, sans-serif;
     font-size: 19px;
     line-height: 24px;
   }
-  &_h3 {
+  &_label {
     font-family: Montserrat-Bold, sans-serif;
     font-size: 12px;
     text-transform: uppercase;

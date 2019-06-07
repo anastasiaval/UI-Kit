@@ -1,94 +1,81 @@
 @import "../../assets/variables";
 
 .dropdown {
-  margin-bottom: 20px;
-  &__label {
+  position: relative;
+  &__title {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+  }
+  &__extra-title {
+    color: $dark-shade-50;
     text-transform: uppercase;
     font-size: 12px;
-    &_left {
-      font-family: Montserrat-Bold, sans-serif;
-      color: $dark-shade-100;
-    }
-    &_right {
-      color: $dark-shade-50;
-    }
   }
-  &__field {
-    position: relative;
-  }
-  &__default {
-    border: 1px solid $dark-shade-25;
-    border-radius: 4px;
-    padding: 11px 8px 7px 15px;
+  &__drop {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+    padding: 9px 10px 9px 15px;
     &_exp {
-      border: 1px solid $dark-shade-25;
       border-radius: 4px 4px 0 0;
-      border-bottom: none;
     }
   }
-  &__icon_arrow {
+  &__icon {
     color: $dark-shade-50;
   }
-  &__expanded {
+  &__options {
     position: absolute;
     z-index: 1;
     width: 100%;
+    display: none;
     background: #FFFFFF;
     border: 1px solid $dark-shade-25;
+    border-top: none;
     border-radius: 0 0 4px 4px;
-    display: none;
-    font-family: Montserrat-Bold, sans-serif;
-    color: $dark-shade-100;
-    text-transform: uppercase;
-    font-size: 12px;
-    padding: 2px 7px 2px 15px;
   }
   &__option {
     display: flex;
     justify-content: space-between;
-    padding: 3px 0;
-    line-height: 28px;
-    &_clear {
-      color: $dark-shade-50;
-      cursor: pointer;
-    }
-    &_apply {
-      color: $purple;
-      cursor: pointer;
-    }
-    &_last {
-      margin-top: 13px;
-    }
+    align-items: center;
+    padding: 7px 3px 7px 15px;
   }
   &__counter {
     display: flex;
     justify-content: space-between;
     width: 92px;
-    &_add-btn {
-      font-family: Montserrat, sans-serif;
-      border: 1px solid $dark-shade-50;
-      border-radius: 22px;
-      color: $dark-shade-50;
-      font-size: 18px;
-      width: 30px;
-      text-align: center;
-      cursor: pointer;
+    align-items: center;
+  }
+  &__counter-btn {
+    border: 1px solid $dark-shade-50;
+    border-radius: 22px;
+    color: $dark-shade-50;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    &_more {
+      padding-top: 4px;
     }
-    &_remove-btn {
-      font-family: Montserrat, sans-serif;
-      border: 1px solid $dark-shade-25;
-      border-radius: 22px;
-      color: $dark-shade-25;
-      font-size: 18px;
-      width: 30px;
-      text-align: center;
-      cursor: pointer;
+    &_less {
+      padding-top: 2px;
+    }
+  }
+  &__btn {
+    font-family: Montserrat-Bold, sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    &_clear {
+      color: $dark-shade-50;
+    }
+    &_apply {
+      color: $purple;
     }
   }
 }

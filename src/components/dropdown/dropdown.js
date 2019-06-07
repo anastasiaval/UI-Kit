@@ -1,13 +1,33 @@
-let $dropdown = $('.dropdown__default');
-let $apply = $('.dropdown__option_apply');
+$(function () {
+    let $dropdown = $('.dropdown__drop');
+    $dropdown.on('click', e => {
+        $dropdown.each(function() {
+            if ($(this).hasClass('dropdown__drop_exp') && this !== e.currentTarget) {
+                $(this).removeClass('dropdown__drop_exp');
+                $('.dropdown__icon').text('keyboard_arrow_down');
+                $('.dropdown__options').slideUp(200);
+            }
+        });
 
-$dropdown.on('click', (e) => {
-    $(e.currentTarget).siblings('.dropdown__expanded').slideToggle(200);
-    $(e.currentTarget).toggleClass('dropdown__default_exp');
-});
+        let $icon = $(e.currentTarget).find('.dropdown__icon');
+        $icon.text() === 'keyboard_arrow_down' ? $icon.text('keyboard_arrow_up') : $icon.text('keyboard_arrow_down');
 
-$apply.on('click', (e) => {
-    $(e.currentTarget).closest('.dropdown__expanded').slideUp(200);
-    $(e.currentTarget).toggleClass('dropdown__default_exp');
+        let $exp = $(e.currentTarget).next('.dropdown__options');
+        $exp.slideToggle(200);
+        $(e.currentTarget).toggleClass('dropdown__drop_exp');
+    });
+
+    $(document).mouseup(e => {
+        let $next = $dropdown.next('.dropdown__options');
+        if (!$dropdown.is(e.target)
+            && $dropdown.has(e.target).length === 0
+            && !$next.is(e.target)
+            && $next.has(e.target).length === 0
+        ) {
+            $dropdown.find('.dropdown__icon').text('keyboard_arrow_down');
+            $next.slideUp(200);
+            $dropdown.removeClass('dropdown__drop_exp');
+        }
+    });
 });
 

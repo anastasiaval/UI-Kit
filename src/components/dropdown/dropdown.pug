@@ -1,22 +1,24 @@
+include ../text/text
 mixin dropdown(options)
     .dropdown
-        .dropdown__label
-            span.dropdown__label_left= options.label_left
-            span.dropdown__label_right= options.label_right
-        .dropdown__field
-            .dropdown__default
-                span= options.defaultField
-                i.material-icons.dropdown__icon keyboard_arrow_down
-            .dropdown__expanded
-                each val, index in options.expanded
-                    .dropdown__option
-                        span= val
-                        .dropdown__counter
-                            span.dropdown__counter_remove-btn -
-                            span.dropdown__counter_number= options.startCount[index]
-                            span.dropdown__counter_add-btn +
-                if options.applyBtn
-                    .dropdown__option.dropdown__option_last
-                        span.dropdown__option_clear очистить
-                        span.dropdown__option_apply применить
+        .dropdown__title
+            +text('span', options.title, 'label')
+            if (options.extraTitle)
+                span.dropdown__extra-title= options.extraTitle
+        .dropdown__drop
+            span= options.defaultText
+            i.material-icons.dropdown__icon keyboard_arrow_down
+        .dropdown__options
+            each val in options.arr
+                .dropdown__option
+                    +text('h3', val.item, 'label')
+                    .dropdown__counter
+                        span.dropdown__counter-btn.dropdown__counter-btn_less -
+                        +text('span', val.num, 'label')
+                        span.dropdown__counter-btn.dropdown__counter-btn_more +
+            if options.buttons
+                .dropdown__option
+                    span.dropdown__btn
+                    span.dropdown__btn.dropdown__btn_apply применить
+//.dropdown__btn_clear очистить
 
