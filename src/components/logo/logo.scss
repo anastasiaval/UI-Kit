@@ -1,26 +1,48 @@
 @import "../../assets/variables";
 
 .logo {
-  position: absolute;
   width: 48px;
   height: 48px;
-  &__circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  position: relative;
+  display: block;
+  background: #FFFFFF;
+  border-radius: 50%;
+  background-clip: padding-box;
+  border: solid 2px transparent;
   &__item-left {
     position: absolute;
-    top: 18px;
-    left: 11px;
+    top: 16px;
+    left: 9px;
+    fill: $dark-shade-25;
+    &_gradient {
+      fill: url(#logo-left-gradient);
+    }
   }
   &__item-right {
     position: absolute;
-    top: 18px;
-    right: 11px;
-  }
-  &_dark-shade25 {
+    top: 15px;
+    right: 9px;
     fill: $dark-shade-25;
+    &_gradient {
+      fill: url(#logo-right-gradient);
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: $dark-shade-25;
+  }
+  &_gradient {
+    &::before {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
   }
 }
 
