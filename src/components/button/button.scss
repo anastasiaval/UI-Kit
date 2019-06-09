@@ -3,12 +3,9 @@
 .btn {
   text-transform: uppercase;
   background: none;
-  outline: none;
   border: none;
-  position: relative;
-  z-index: 0;
+  outline: none;
   cursor: pointer;
-  margin: 16px 20px 30px 0;
   font-family: Montserrat-Bold, sans-serif;
   font-size: 12px;
   color: $purple;
@@ -16,29 +13,43 @@
     color: $dark-shade-50;
   }
   &_bg {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    padding: 14px 19px;
+    position: relative;
+    color: #FFFFFF;
+    width: 99px;
+    height: 44px;
     border-radius: 22px;
-    color: #fff;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     &:hover {
-      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
       color: #FFFFFF;
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
     }
   }
   &_border {
     color: $purple;
-    &::after {
+    background: #FFFFFF;
+    position: relative;
+    width: 99px;
+    height: 44px;
+    border-radius: 22px;
+    background-clip: padding-box;
+    border: solid 2px transparent;
+    &::before {
+      content: '';
       position: absolute;
-      content: "";
-      top: 2px;
-      left: 2px;
-      border-radius: 22px;
-      padding: 19.5px 47.5px;
-      background: #fff;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
     &:hover {
       color: $purple;
+      &::before {
+        background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+      }
     }
   }
   &_submit {

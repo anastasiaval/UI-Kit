@@ -1,36 +1,44 @@
 @import "../../assets/variables";
 
 .like-btn {
+  background: #FFFFFF;
+  position: relative;
   width: 40px;
   height: 20px;
+  background-clip: padding-box;
+  border: solid 1px transparent;
   border-radius: 10px;
-  background: $dark-shade-25;
-  cursor: pointer;
   outline: none;
-  border: none;
-  &_liked {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    .like-btn__bg {
-      color: $purple;
-    }
+  color: $dark-shade-25;
+  cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: $dark-shade-25;
   }
-  &__bg {
-    position: relative;
-    background: #FFFFFF;
-    display: block;
-    width: 38px;
-    height: 18px;
-    border-radius: 8px;
-    margin: auto;
-    padding: 2px 0 0 8px;
+  &__num {
     font-size: 10px;
-    color: $dark-shade-25;
   }
   &__icon {
+    font-size: 10px;
     position: absolute;
     top: 4px;
-    left: 4px;
-    font-size: 10px;
+    left: 5px;
+  }
+  &_liked {
+    color: $purple;
+    &:before{
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+  }
+  &__likes {
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
   }
 }
 
