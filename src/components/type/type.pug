@@ -1,9 +1,10 @@
+include ../text/text
+
 .type
     .type__item
         p.type__name.type__name_h1 H1
         .type__desc
-            include ../text/text
-            +text('h1', 'This one is&nbsp;the sub-section or&nbsp;widget title', 'title')
+            +text('h1', 'This one is&nbsp;the sub-section&nbsp;or widget title', 'title')
     .type__item
         p.type__name.type__name_h2 H2
         .type__desc
@@ -14,6 +15,6 @@
             +text('h3', 'This is&nbsp;a&nbsp;label or&nbsp;CTA text', 'label')
     .type__item
         p.type__name Body
-        .type__desc
+        .type__desc.type__desc_body
             p This is&nbsp;the body text which is&nbsp;used for most of&nbsp;the&nbsp;design, like paragraphs, lists, etc.
 

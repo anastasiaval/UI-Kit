@@ -8,6 +8,9 @@
   }
   &__desc {
     width: 360px;
+    &_body {
+      line-height: 20px;
+    }
   }
   &__name {
     width: 40px;
