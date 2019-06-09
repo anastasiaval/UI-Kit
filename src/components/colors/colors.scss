@@ -1,5 +1,26 @@
+@import "../../assets/variables";
+
 .colors {
   margin-top: 5px;
   margin-left: 10px;
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__color {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+  }
+  &__desc {
+    padding-top: 10px;
+  }
+  &__hex {
+    font-family: Quicksand, sans-serif;
+    font-size: 19px;
+    color: $dark-shade-100;
+    line-height: 32px;
+  }
 }
 
