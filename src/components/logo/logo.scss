@@ -15,6 +15,10 @@
     left: 9px;
     fill: $dark-shade-25;
     &_gradient {
+      width: 13px;
+      height: 13px;
+      top: 13px;
+      left: 7px;
       fill: url(#logo-left-gradient);
     }
   }
@@ -24,6 +28,10 @@
     right: 9px;
     fill: $dark-shade-25;
     &_gradient {
+      width: 10px;
+      height: 7px;
+      top: 13px;
+      right: 7px;
       fill: url(#logo-right-gradient);
     }
   }
@@ -40,6 +48,8 @@
     background: $dark-shade-25;
   }
   &_gradient {
+    width: 40px;
+    height: 40px;
     &::before {
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
