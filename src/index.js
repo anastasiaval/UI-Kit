@@ -2,7 +2,6 @@ import 'assets/style.scss';
 import 'assets/variables.scss';
 import 'components/logo/logo.scss';
 import 'components/colors/colors.scss';
-import 'components/colors/__item/__item.scss';
 import 'components/type/type.scss';
 import 'components/text/text.scss';
 import 'components/form/form.scss';

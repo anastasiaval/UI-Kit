@@ -1,3 +1,18 @@
+include components/logo/logo
+include components/colors/colors
+include components/input/input
+include components/dropdown/dropdown
+include components/checkbox/checkbox
+include components/radio/radio
+include components/toggle/toggle
+include components/like-btn/like-btn
+include components/rate-btn/rate-btn
+include components/button/button
+include components/checkbox-expandable/checkbox-expandable
+include components/room-info/room-info
+include components/bullet-list/bullet-list
+include components/review/review
+
 doctype html
 html(lang="en")
     head
@@ -5,14 +20,22 @@ html(lang="en")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         title UI Kit
     body
-        include components/logo/logo
+        .logo-kit-wrapper
+            +logo()
         .content
-            include components/colors/colors
+            +colors([
+                {desc: 'Dark Shade 100%', hex: '#1F2041', opacity: 1},
+                {desc: 'Dark Shade 75%', hex: '#1F2041', opacity: 0.75},
+                {desc: 'Dark Shade 50%', hex: '#1F2041', opacity: 0.5},
+                {desc: 'Dark Shade 25%', hex: '#1F2041', opacity: 0.25},
+                {desc: 'Dark Shade 5%', hex: '#1F2041', opacity: 0.05},
+                {desc: 'Purple', hex: '#BC9CFF', opacity: 1},
+                {desc: 'Green', hex: '#6FCF97', opacity: 1},
+                ])
             include components/type/type
         .content
             div
                 form.form_wide
-                    include components/input/input
                     +input({
                         label_left: 'Text Field',
                         label_right: 'Default',
@@ -25,7 +48,6 @@ html(lang="en")
                         placeholder: 'This is pretty awesome',
                         type: 'text'
                     })
-                    include components/dropdown/dropdown
                     +dropdown({
                         title: 'Dropdown',
                         extraTitle: 'Default',
@@ -71,29 +93,24 @@ html(lang="en")
             div
                 form.form_box.form_narrow
                     +text('h3', 'Checkbox Buttons', 'label')
-                    include components/checkbox/checkbox
                     +checkbox({text: 'Можно курить', checked: false})
                     +checkbox({text: 'Можно с питомцами', checked: true})
                     +checkbox({text: 'Можно пригласить гостей (до&nbsp;10&nbsp;человек)', checked: true})
                 form.form_box
                     +text('h3', 'Radio buttons', 'label')
-                    include components/radio/radio
                     +radio('gender', 'male', 'Мужчина', true)
                     +radio('gender', 'female', 'Женщина', false)
                 form.form_box
                     +text('h3', 'Toggle', 'label')
-                    include components/toggle/toggle
                     +toggle({text: 'Получать спецпредложения', checked: true})
                     +toggle({text: 'Получать спецпредложения', checked: false})
                 .form_box
                     +text('h3', 'Like button', 'label')
-                    include components/like-btn/like-btn
                     +like({likes: 2, isLiked: false})
                     +like({likes: 12, isLiked: true})
                 .form_box
                     +text('h3', 'rate button', 'label')
                     .form__wrapper
-                        include components/rate-btn/rate-btn
                         +rate('rate-1')
                         +rate('rate-10')
             div
@@ -101,7 +118,6 @@ html(lang="en")
                     include components/range-slider/range-slider
                 .form_box
                     +text('h3', 'buttons', 'label')
-                    include components/button/button
                     div
                         +button({type: 'bg', text: 'click me'})
                         +button({type: 'bg', text: 'click me'})
@@ -142,8 +158,7 @@ html(lang="en")
                         buttons: false
                     })
                 .form_narrow
-                    include components/checkbox-expandable/checkbox-expandable
-                    +checkbox-exp({
+                    +checkbox-expandable({
                         title: 'expandable checkbox list',
                         arr: [
                             {text: 'Завтрак', checked: false},
@@ -156,7 +171,7 @@ html(lang="en")
                             {text: 'Шампунь', checked: false},
                         ]
                     })
-                    +checkbox-exp({
+                    +checkbox-expandable({
                         title: 'expandable checkbox list',
                         arr: [
                             {text: 'Завтрак', checked: false},
@@ -169,7 +184,6 @@ html(lang="en")
                             {text: 'Шампунь', checked: false},
                         ]
                     })
-                include components/room-info/room-info
                 +room-info({icon: 'mood', heading: 'Комфорт', text: 'Шумопоглощающие стены'})
                 +room-info({icon: 'location_city', heading: 'Удобство', text: 'Окно в каждой из спален'})
 
@@ -213,14 +227,12 @@ html(lang="en")
                         })
                     .form_narrow
                         +text('h3', 'Bullet List', 'label')
-                        include components/bullet-list/bullet-list
                         +bullet-list([
                             'Нельзя с&nbsp;питомцами',
                             'Без вечеринок и&nbsp;мероприятий',
                             'Время прибытия&nbsp;&mdash; после 13:00, а&nbsp;выезд до&nbsp;12:00'
                         ])
                 div
-                    include components/review/review
                     +review({
                         img: '/murad2.png',
                         name: 'Мурад Сарафанов',
@@ -229,3 +241,4 @@ html(lang="en")
                         isLiked: true,
                         text: 'Великолепный матрас на&nbsp;кровати в&nbsp;основной спальне! А&nbsp;пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару&nbsp;&mdash; никто не&nbsp;жаловался из&nbsp;соседей.'
                     })
+
