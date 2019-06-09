@@ -1,6 +1,11 @@
 include ../../components/checkbox/checkbox
 include ../text/text
-mixin checkbox-exp(options)
+
+    //-
+        options.title - string - heading of the checkbox
+        options.arr - array - {text: string, checked: bool}
+
+mixin checkbox-expandable(options)
     .checkbox-exp
         +text('h3', options.title, 'label')
         i.material-icons.checkbox-exp__icon keyboard_arrow_down
