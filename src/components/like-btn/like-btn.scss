@@ -11,6 +11,11 @@
   outline: none;
   color: $dark-shade-25;
   cursor: pointer;
+  &:hover {
+    &:before{
+      background: $gr-primary-rgba;
+    }
+  }
   &:before {
     content: '';
     position: absolute;
@@ -32,7 +37,7 @@
   &_liked {
     color: $purple;
     &:before{
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $gr-primary-rgba;
     }
   }
   &__likes {

@@ -1,7 +1,7 @@
 include ../text/text
 
 //-
-    colors - array of objects {desc: string, hex: string, opacity: number}
+    colors - array - [{desc: string, hex: string, opacity: number}]
 
 mixin colors(colors)
     .colors
@@ -9,6 +9,10 @@ mixin colors(colors)
             .colors__item
                 .colors__color(style={background: val.hex, opacity: val.opacity})
                 .colors__desc
-                    +text('p', val.desc, 'item-title')
+                    +text({
+                        tag: 'p',
+                        text: val.desc,
+                        type: 'item-title'
+                    })
                     span.colors__hex= val.hex
 

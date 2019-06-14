@@ -1,3 +1,6 @@
+//-
+    type - string - if gradient
+
 mixin logo(type)
     a.logo(href='#' class= (type === 'gradient' ? 'logo_gradient' : ''))
         svg.logo__item-left(class= (type === 'gradient' ? 'logo__item-left_gradient' : '') width='15', height='15', viewbox='0 0 15 15', fill='none', xmlns='http://www.w3.org/2000/svg')

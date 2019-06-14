@@ -1,6 +1,12 @@
+//-
+    options.mod - string - 'rich' for rich checkbox
+    options.text - string - checkbox text
+    options.darkText - string - darker text for rich checkbox
+    options.checked - bool - if true checked='checked'
+
 mixin checkbox(options)
     label.checkbox
-        input.checkbox__input(type='checkbox' checked=(options.checked ? 'checked' : false))
+        input.checkbox__input(type='checkbox' checked= options.checked)
         .checkbox__wrapper
             span.checkbox__box
                 span.checkbox__check

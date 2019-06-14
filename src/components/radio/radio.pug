@@ -1,6 +1,12 @@
-mixin radio(name, value, text, checked)
+//-
+    options.name - string - input name
+    options.value - string - input value
+    options.text - string - input text
+    options.checked - bool - if true checked='checked'
+
+mixin radio(options)
     label.radio
-        input.radio__input(name= name value= value type='radio' checked=(checked ? 'checked' : false))
+        input.radio__input(name= options.name value= options.value type='radio' checked= options.checked)
         span.radio__box
-        span.radio__label= text
+        span.radio__label= options.text
 

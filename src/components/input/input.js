@@ -56,7 +56,7 @@ function datepicker($input, onSelect, format) {
 }
 
 $(function () {
-    const $datepicker = $('.form__wrapper').find('.input_datepicker');
+    const $datepicker = $('.flex-bw').find('.input_datepicker');
     const datepickerOnSelect = function(dateText, inst, extensionRange) {
         $datepicker[0].value = extensionRange.startDateText;
         $datepicker[1].value = extensionRange.endDateText;

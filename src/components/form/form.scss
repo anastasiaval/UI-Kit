@@ -1,16 +1,27 @@
 .form {
+  &__label {
+    line-height: 44px;
+  }
   &_wide {
     width: 320px;
   }
   &_narrow {
     width: 266px;
   }
-  &_box {
+  &_mr-72 {
+    margin-right: 72px;
+  }
+  &_mb-40 {
     margin-bottom: 40px;
   }
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
+  &_mb-42 {
+    margin-bottom: 42px;
+  }
+  &_mb-44 {
+    margin-bottom: 44px;
+  }
+  &_mb-46 {
+    margin-bottom: 46px;
   }
 }
 

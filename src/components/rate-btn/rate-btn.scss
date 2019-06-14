@@ -1,6 +1,7 @@
+@import "../../assets/variables";
+
 .rate {
-  margin-top: 16px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: $gr-primary-rgba;
   background-clip: text;
   i {
     display: inline;

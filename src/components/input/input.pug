@@ -1,19 +1,41 @@
+include ../text/text
+
+//-
+    options.leftLabel - string - left label
+    options.rightLabel - string - right label
+    options.placeholder - string - placeholder text
+    options.labelMod - string - label & icon modification for position of the icon
+    options.type - string - input type
+    options.mod - string - modification of the element (datepicker|filter-datepicker|date)
+    options.positionMod - string|array - position of the element
+
 mixin input(options)
+    -var position = '';
+    if options.positionMod
+        if (typeof(options.positionMod) !== 'string')
+            each val in options.positionMod
+                -position += 'input_' + val + ' ';
+        else
+            -position = 'input_' + options.positionMod;
     label(class= (options.labelMod ? 'input__label_' + options.labelMod : ''))
         .input__label
-            span.input__label_left= options.label_left
-            if options.label_right
-                span.input__label_right= options.label_right
+            +text({
+                tag: 'span',
+                text: options.leftLabel,
+                type: 'label'
+            })
+            if options.rightLabel
+                span.input__label_right= options.rightLabel
         if options.mod
             if options.mod === 'datepicker' || options.mod === 'filter-datepicker'
-                input.input(class= 'input_' + options.mod type= options.type, placeholder= options.placeholder readonly)
+                input.input(class= position class= 'input_' + options.mod type= options.type, placeholder= options.placeholder readonly)
             else
-                input.input(class= 'input_' + options.mod type= options.type, placeholder= options.placeholder)
+                input.input(class= position class= 'input_' + options.mod type= options.type, placeholder= options.placeholder)
         else
-            input.input(type= options.type, placeholder= options.placeholder)
+            input.input(class= position type= options.type, placeholder= options.placeholder)
         if options.labelMod === 'subscribe'
             button.input__submit(type='submit')
                 i.material-icons.input__icon.input__icon_subscribe arrow_forward
-        if options.labelMod === 'datepicker' || options.labelMod === 'filter-datepicker'
+        if options.mod === 'datepicker' || options.mod === 'filter-datepicker'
             i.material-icons.input__icon(class= 'input__icon_' + options.labelMod) keyboard_arrow_down
 

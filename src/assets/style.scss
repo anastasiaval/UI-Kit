@@ -72,8 +72,37 @@ body {
   left: 30px;
 }
 
+.review-kit-wr {
+  margin-top: 26px;
+  margin-left: 5px;
+}
+
+.kit-w260 {
+  width: 260px;
+}
+
+.kit-w90 {
+  width: 90px;
+}
+
 .content {
-  margin: 140px;
+  margin: 0 140px;
+  &_btm-167 {
+    margin-bottom: 167px;
+  }
+  &_btm-100 {
+    margin-bottom: 100px;
+  }
+  &_top-140 {
+    margin-top: 140px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-bw {
   display: flex;
   justify-content: space-between;
 }
@@ -86,9 +115,3 @@ body {
   display: block;
 }
 
-.ui-kit-wrapper {
-  display: flex;
-  width: 750px;
-  height: 315px;
-  justify-content: space-between;
-}

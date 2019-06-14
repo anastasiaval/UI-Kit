@@ -1,3 +1,16 @@
-mixin text(tag, text, type)
-    #{tag}.text(class= 'text_' + type) !{text}
+//-
+    options.tag - string - tag of the element
+    options.type - string - title|item-title|label
+    options.text - string - text
+    options.positionMod - string|array - position of the element
+
+mixin text(options)
+    -var position = '';
+    if options.positionMod
+        if (typeof (options.positionMod) !== 'string')
+            each val in options.positionMod
+                -position += 'text_' + val + ' ';
+        else
+            -position = 'text_' + options.positionMod;
+    #{options.tag}.text(class= 'text_' + options.type class= position) !{options.text}
 

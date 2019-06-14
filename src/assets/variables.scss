@@ -4,6 +4,14 @@ $dark-shade-75: rgba(31, 32, 65, 0.75);
 $dark-shade-50: rgba(31, 32, 65, 0.5);
 $dark-shade-25: rgba(31, 32, 65, 0.25);
 $dark-shade-5: rgba(31, 32, 65, 0.05);
+$dark-shade-1: rgba(31, 32, 65, 0.1);
 $purple: #BC9CFF;
 $green: #6FCF97;
 
+//gradient
+//$gr-primary: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+///////////////linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$gr-primary-rgba: linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
+$gr-secondary: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+//box-shadow: 0 10px 20px $dark-shade-5;

@@ -7,7 +7,11 @@ include ../text/text
 
 mixin checkbox-expandable(options)
     .checkbox-exp
-        +text('h3', options.title, 'label')
+        +text({
+            tag: 'h3',
+            text: options.title,
+            type: 'label'
+        })
         i.material-icons.checkbox-exp__icon keyboard_arrow_down
     .checkbox-exp__options
         each val in options.arr

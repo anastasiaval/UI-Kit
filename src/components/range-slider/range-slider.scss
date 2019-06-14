@@ -18,17 +18,17 @@
     height: 6px;
   }
   .ui-widget-header {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $gr-secondary;
   }
   .ui-slider-handle {
     position: absolute;
     z-index: 2;
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     touch-action: none;
-    top: -4px;
+    top: -5px;
     margin-left: -8px;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $gr-secondary;
     border: 2px solid #FFFFFF;
     outline: none;
     border-radius: 10px;

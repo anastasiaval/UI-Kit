@@ -1,3 +1,7 @@
+//-
+    options.isLiked - bool - true if liked
+    options.likes - int - number of likes
+
 mixin like(options)
     button.like-btn(class= (options.isLiked ? 'like-btn_liked' : ''))
         if (options.isLiked)

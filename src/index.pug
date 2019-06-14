@@ -22,7 +22,7 @@ html(lang="en")
     body
         .logo-kit-wrapper
             +logo()
-        .content
+        .content.content_top-140.content_btm-100.flex-bw
             +colors([
                 {desc: 'Dark Shade 100%', hex: '#1F2041', opacity: 1},
                 {desc: 'Dark Shade 75%', hex: '#1F2041', opacity: 0.75},
@@ -33,24 +33,182 @@ html(lang="en")
                 {desc: 'Green', hex: '#6FCF97', opacity: 1},
                 ])
             include components/type/type
-        .content
+        .content.content_btm-100.flex-bw
             div
                 form.form_wide
                     +input({
-                        label_left: 'Text Field',
-                        label_right: 'Default',
+                        leftLabel: 'Text Field',
+                        rightLabel: 'Default',
                         placeholder: 'Email',
-                        type: 'text'
+                        type: 'text',
+                        positionMod: 'mb-20'
                     })
                     +input({
-                        label_left: 'Text Field',
-                        label_right: 'Hover / Focus',
+                        leftLabel: 'Text Field',
+                        rightLabel: 'Hover / Focus',
                         placeholder: 'This is pretty awesome',
-                        type: 'text'
+                        type: 'text',
+                        positionMod: 'mb-20'
                     })
                     +dropdown({
                         title: 'Dropdown',
-                        extraTitle: 'Default',
+                        rightLabel: 'Default',
+                        defaultText: 'Сколько гостей',
+                        arr: [
+                            {item: 'взрослые', num: 0},
+                            {item: 'дети', num: 0},
+                            {item: 'младенцы', num: 0},
+                        ],
+                        buttons: true,
+                        positionMod: 'mb-24'
+                    })
+                    +input({
+                        leftLabel: 'masked text field',
+                        rightLabel: 'Default',
+                        placeholder: 'ДД.ММ.ГГГГ',
+                        type: 'text',
+                        mod: 'date',
+                        positionMod: 'mb-40'
+                    })
+                    .flex-bw
+                        +input({
+                            leftLabel: 'date Dropdown',
+                            placeholder: 'ДД.ММ.ГГГГ',
+                            mod: 'datepicker',
+                            labelMod: 'datepicker',
+                            positionMod: 'mb-40'
+                        })
+                        +input({
+                            leftLabel: 'date Dropdown',
+                            placeholder: 'ДД.ММ.ГГГГ',
+                            mod: 'datepicker',
+                            labelMod: 'datepicker',
+                            positionMod: 'mb-40'
+                        })
+                form.form_narrow
+                    +input({
+                        leftLabel: 'filter date dropdown',
+                        mod: 'filter-datepicker',
+                        labelMod: 'filter-datepicker',
+                        positionMod: 'mb-40'
+                    })
+                    +input({
+                        leftLabel: 'subscription text field',
+                        placeholder: 'Email',
+                        type: 'email',
+                        labelMod: 'subscribe'
+                    })
+            div
+                form.form_mb-42.form_narrow
+                    +text({
+                        tag: 'h3',
+                        text: 'Checkbox Buttons',
+                        type: 'label',
+                        positionMod: 'mb-16'
+                    })
+                    +checkbox({text: 'Можно курить', checked: false})
+                    +checkbox({text: 'Можно с питомцами', checked: true})
+                    +checkbox({text: 'Можно пригласить гостей (до&nbsp;10&nbsp;человек)', checked: true})
+                form.form_mb-42
+                    +text({
+                        tag: 'h3',
+                        text: 'Radio buttons',
+                        type: 'label',
+                        positionMod: 'mb-16'
+                    })
+                    +radio({name: 'gender', value: 'male', text: 'Мужчина', checked: true})
+                    +radio({name: 'gender', value: 'female', text: 'Женщина', checked: false})
+                form.form_mb-46
+                    +text({
+                        tag: 'h3',
+                        text: 'Toggle',
+                        type: 'label',
+                        positionMod: 'mb-16'
+                    })
+                    +toggle({text: 'Получать спецпредложения', checked: true})
+                    +toggle({text: 'Получать спецпредложения', checked: false})
+                .form_mb-40
+                    +text({
+                        tag: 'h3',
+                        text: 'Like button',
+                        type: 'label',
+                        positionMod: 'mb-16'
+                    })
+                    .flex-bw.kit-w90
+                        +like({likes: 2, isLiked: false})
+                        +like({likes: 12, isLiked: true})
+                .form_mb-40
+                    +text({
+                        tag: 'h3',
+                        text: 'rate button',
+                        type: 'label',
+                        positionMod: 'mb-16'
+                    })
+                    .flex-bw.kit-w260
+                        +rate('rate-1')
+                        +rate('rate-10')
+            div
+                .form_mb-44.form_narrow
+                    include components/range-slider/range-slider
+                    +range-slider({
+                        text: {tag: 'h3', text: 'Range Slider', type: 'label'},
+                        rangeText: '5 000₽ - 10 000₽'
+                    })
+                .form_mb-40
+                    +text({
+                        tag: 'h3',
+                        text: 'buttons',
+                        type: 'label',
+                        positionMod: 'mb-16'
+                    })
+                    div
+                        +button({type: 'bg', text: 'click me', positionMod: ['mr-16', 'mb-30']})
+                        +button({type: 'bg', text: 'click me'})
+                    div
+                        +button({type: 'border', text: 'click me', positionMod: ['mr-16', 'mb-30']})
+                        +button({type: 'border', text: 'click me'})
+                    div
+                        +button({type: 'btn', text: 'click me', positionMod: ['mr-16', 'mb-30']})
+                        +button({type: 'btn', text: 'click me'})
+                    form.form_wide
+                        +button({type: 'submit', text: 'перейти к оплате'})
+                .form_mb-40
+                    +text({
+                        tag: 'h3',
+                        text: 'pagination',
+                        type: 'label',
+                        positionMod: 'mb-16'
+                    })
+                    include components/pagination/pagination
+        .content.content_btm-167.flex-bw
+            .form_narrow
+                +dropdown({
+                    title: 'Dropdown',
+                    extraTitle: 'Default',
+                    defaultText: '2 спальни, 2 кровати...',
+                    arr: [
+                        {item: 'спальни', num: 2},
+                        {item: 'кровати', num: 2},
+                        {item: 'ванные комнаты', num: 0},
+                    ],
+                    buttons: false,
+                    positionMod: 'mb-20'
+                })
+                +dropdown({
+                    title: 'Dropdown',
+                    extraTitle: 'expanded',
+                    defaultText: '2 спальни, 2 кровати...',
+                    arr: [
+                        {item: 'спальни', num: 2},
+                        {item: 'кровати', num: 2},
+                        {item: 'ванные комнаты', num: 0},
+                    ],
+                    buttons: false
+                })
+            .flex
+                .form_wide.form_mr-72
+                    +dropdown({
+                        title: 'Dropdown',
                         defaultText: 'Сколько гостей',
                         arr: [
                             {item: 'взрослые', num: 0},
@@ -59,186 +217,94 @@ html(lang="en")
                         ],
                         buttons: true
                     })
-                    +input({
-                        label_left: 'masked text field',
-                        label_right: 'Default',
-                        placeholder: 'ДД.ММ.ГГГГ',
-                        type: 'text',
-                        mod: 'date'})
-                    .form__wrapper
-                        +input({
-                            label_left: 'date Dropdown',
-                            placeholder: 'ДД.ММ.ГГГГ',
-                            mod: 'datepicker',
-                            labelMod: 'datepicker'
-                        })
-                        +input({
-                            label_left: 'date Dropdown',
-                            placeholder: 'ДД.ММ.ГГГГ',
-                            mod: 'datepicker',
-                            labelMod: 'datepicker'
-                        })
-                form.form_narrow
-                    +input({
-                        label_left: 'filter date dropdown',
-                        mod: 'filter-datepicker',
-                        labelMod: 'filter-datepicker'
-                    })
-                    +input({
-                        label_left: 'subscription text field',
-                        placeholder: 'Email',
-                        type: 'email',
-                        labelMod: 'subscribe'
-                    })
-            div
-                form.form_box.form_narrow
-                    +text('h3', 'Checkbox Buttons', 'label')
-                    +checkbox({text: 'Можно курить', checked: false})
-                    +checkbox({text: 'Можно с питомцами', checked: true})
-                    +checkbox({text: 'Можно пригласить гостей (до&nbsp;10&nbsp;человек)', checked: true})
-                form.form_box
-                    +text('h3', 'Radio buttons', 'label')
-                    +radio('gender', 'male', 'Мужчина', true)
-                    +radio('gender', 'female', 'Женщина', false)
-                form.form_box
-                    +text('h3', 'Toggle', 'label')
-                    +toggle({text: 'Получать спецпредложения', checked: true})
-                    +toggle({text: 'Получать спецпредложения', checked: false})
-                .form_box
-                    +text('h3', 'Like button', 'label')
-                    +like({likes: 2, isLiked: false})
-                    +like({likes: 12, isLiked: true})
-                .form_box
-                    +text('h3', 'rate button', 'label')
-                    .form__wrapper
-                        +rate('rate-1')
-                        +rate('rate-10')
-            div
-                .form_box.form_narrow
-                    include components/range-slider/range-slider
-                .form_box
-                    +text('h3', 'buttons', 'label')
-                    div
-                        +button({type: 'bg', text: 'click me'})
-                        +button({type: 'bg', text: 'click me'})
-                    div
-                        +button({type: 'border', text: 'click me'})
-                        +button({type: 'border', text: 'click me'})
-                    div
-                        +button({type: 'btn', text: 'click me'})
-                        +button({type: 'btn', text: 'click me'})
-                    form.form_wide
-                        +button({type: 'submit', text: 'перейти к оплате'})
-                .form_box
-                    +text('h3', 'pagination', 'label')
-                    include components/pagination/pagination
-        .content
-            div
-                form.form_narrow
+                .form_wide
                     +dropdown({
                         title: 'Dropdown',
-                        extraTitle: 'Default',
-                        defaultText: '2 спальни, 2 кровати...',
+                        defaultText: 'Сколько гостей',
                         arr: [
-                            {item: 'спальни', num: 2},
-                            {item: 'кровати', num: 2},
-                            {item: 'ванные комнаты', num: 0},
+                            {item: 'взрослые', num: 0},
+                            {item: 'дети', num: 0},
+                            {item: 'младенцы', num: 0},
                         ],
-                        buttons: false
+                        buttons: true
                     })
-                    +dropdown({
-                        title: 'Dropdown',
-                        extraTitle: 'expanded',
-                        defaultText: '2 спальни, 2 кровати...',
-                        arr: [
-                            {item: 'спальни', num: 2},
-                            {item: 'кровати', num: 2},
-                            {item: 'ванные комнаты', num: 0},
-                        ],
-                        buttons: false
-                    })
-                .form_narrow
-                    +checkbox-expandable({
-                        title: 'expandable checkbox list',
-                        arr: [
-                            {text: 'Завтрак', checked: false},
-                            {text: 'Письменный стол', checked: true},
-                            {text: 'Стул для кормления', checked: true},
-                            {text: 'Кроватка', checked: true},
-                            {text: 'Телевизор', checked: false},
-                            {text: 'Шампунь', checked: false},
-                            {text: 'Телевизор', checked: false},
-                            {text: 'Шампунь', checked: false},
-                        ]
-                    })
-                    +checkbox-expandable({
-                        title: 'expandable checkbox list',
-                        arr: [
-                            {text: 'Завтрак', checked: false},
-                            {text: 'Письменный стол', checked: true},
-                            {text: 'Стул для кормления', checked: true},
-                            {text: 'Кроватка', checked: true},
-                            {text: 'Телевизор', checked: false},
-                            {text: 'Шампунь', checked: false},
-                            {text: 'Телевизор', checked: false},
-                            {text: 'Шампунь', checked: false},
-                        ]
-                    })
-                +room-info({icon: 'mood', heading: 'Комфорт', text: 'Шумопоглощающие стены'})
-                +room-info({icon: 'location_city', heading: 'Удобство', text: 'Окно в каждой из спален'})
 
+
+        .content.flex-bw
             div
-                .ui-kit-wrapper
-                    .form_wide
-                        +dropdown({
-                            title: 'Dropdown',
-                            defaultText: 'Сколько гостей',
-                            arr: [
-                                {item: 'взрослые', num: 0},
-                                {item: 'дети', num: 0},
-                                {item: 'младенцы', num: 0},
-                            ],
-                            buttons: true
-                        })
-                    .form_wide
-                        +dropdown({
-                            title: 'Dropdown',
-                            defaultText: 'Сколько гостей',
-                            arr: [
-                                {item: 'взрослые', num: 0},
-                                {item: 'дети', num: 0},
-                                {item: 'младенцы', num: 0},
-                            ],
-                            buttons: true
-                        })
-                .ui-kit-wrapper
+                .form_narrow.form_mb-40
+                    +checkbox-expandable({
+                        title: 'expandable checkbox list',
+                        arr: [
+                            {text: 'Завтрак', checked: false},
+                            {text: 'Письменный стол', checked: true},
+                            {text: 'Стул для кормления', checked: true},
+                            {text: 'Кроватка', checked: true},
+                            {text: 'Телевизор', checked: false},
+                            {text: 'Шампунь', checked: false},
+                            {text: 'Телевизор', checked: false},
+                            {text: 'Шампунь', checked: false},
+                        ]
+                    })
+                .form_narrow.form_mb-40
+                    +checkbox-expandable({
+                        title: 'expandable checkbox list',
+                        arr: [
+                            {text: 'Завтрак', checked: false},
+                            {text: 'Письменный стол', checked: true},
+                            {text: 'Стул для кормления', checked: true},
+                            {text: 'Кроватка', checked: true},
+                            {text: 'Телевизор', checked: false},
+                            {text: 'Шампунь', checked: false},
+                            {text: 'Телевизор', checked: false},
+                            {text: 'Шампунь', checked: false},
+                        ]
+                    })
+            .flex
+                .form_wide.form_mr-72
                     .form_narrow
-                        +text('h3', 'Rich Checkbox Buttons', 'label')
+                        +text({
+                            tag: 'h3',
+                            text: 'Rich Checkbox Buttons',
+                            type: 'label',
+                            positionMod: ['mt-6', 'mb-16']
+                        })
                         +checkbox({
                             text: 'Ширина коридоров в&nbsp;номере не&nbsp;менее 91&nbsp;см.',
                             checked: false,
                             mod: 'rich',
-                            darkText: 'Широкий коридор'})
+                            darkText: 'Широкий коридор'
+                        })
                         +checkbox({
                             text: 'На&nbsp;1&nbsp;этаже вас встретит специалист и&nbsp;проводит до&nbsp;номера.',
                             checked: false,
                             mod: 'rich',
                             darkText: 'Помощник для инвалидов'
                         })
+                .form_wide
                     .form_narrow
-                        +text('h3', 'Bullet List', 'label')
+                        +text({
+                            tag: 'h3',
+                            text: 'Bullet List',
+                            type: 'label',
+                            positionMod: ['mt-6', 'mb-13']
+                        })
                         +bullet-list([
                             'Нельзя с&nbsp;питомцами',
                             'Без вечеринок и&nbsp;мероприятий',
                             'Время прибытия&nbsp;&mdash; после 13:00, а&nbsp;выезд до&nbsp;12:00'
                         ])
-                div
-                    +review({
-                        img: '/murad2.png',
-                        name: 'Мурад Сарафанов',
-                        daysAgo: 5,
-                        likes: 12,
-                        isLiked: true,
-                        text: 'Великолепный матрас на&nbsp;кровати в&nbsp;основной спальне! А&nbsp;пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару&nbsp;&mdash; никто не&nbsp;жаловался из&nbsp;соседей.'
-                    })
+        .content.flex-bw
+            .form_mr-72
+                +room-info({icon: 'mood', heading: 'Комфорт', text: 'Шумопоглощающие стены'})
+                +room-info({icon: 'location_city', heading: 'Удобство', text: 'Окно в каждой из спален'})
+            .review-kit-wr
+                +review({
+                    img: '/murad2.png',
+                    name: 'Мурад Сарафанов',
+                    daysAgo: 5,
+                    likes: 12,
+                    isLiked: true,
+                    text: 'Великолепный матрас на&nbsp;кровати в&nbsp;основной спальне! А&nbsp;пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару&nbsp;&mdash; никто не&nbsp;жаловался из&nbsp;соседей.'
+                })
 

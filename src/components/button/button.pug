@@ -1,11 +1,23 @@
+//-
+    options.type- string - (btn|bg|border|submit)
+    options.text - string - button text
+    options.positionMod - string|array - position of the element
+
 mixin button(options)
+    -var position = '';
+    if options.positionMod
+        if (typeof (options.positionMod) !== 'string')
+            each val in options.positionMod
+                -position += 'btn_' + val + ' ';
+        else
+            -position = 'btn_' + options.positionMod;
     if options.type === 'btn'
-        button.btn= options.text
+        button.btn(class= position)= options.text
     if options.type === 'bg'
-        button.btn.btn_bg= options.text
+        button.btn.btn_bg(class= position)= options.text
     if options.type === 'border'
-        button.btn.btn_border= options.text
+        button.btn.btn_border(class= position)= options.text
     if options.type === 'submit'
-        button.btn.btn_bg.btn_submit= options.text
+        button.btn.btn_bg.btn_submit(class= position)= options.text
             i.material-icons.btn_submit__icon arrow_forward
 

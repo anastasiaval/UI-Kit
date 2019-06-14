@@ -1,4 +1,12 @@
 include ../../components/like-btn/like-btn
+
+//-
+    options.likes - int - number of likes
+    options.isLiked - bool - true if liked
+    options.name - string - reviewer's name
+    options.daysAgo - int - number of days since the review was written
+    options.text - string - review text
+
 mixin review(options)
     .review
         .review__img
@@ -8,3 +16,4 @@ mixin review(options)
             p.review__text_name= options.name
             p.review__text_days= options.daysAgo + ' дней назад'
             p.review__text_body !{options.text}
+

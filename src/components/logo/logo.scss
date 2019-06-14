@@ -51,7 +51,7 @@
     width: 40px;
     height: 40px;
     &::before {
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $gr-primary-rgba;
     }
   }
 }

@@ -3,14 +3,14 @@
 .toggle {
   cursor: pointer;
   display: block;
-  margin-top: 16px;
+  margin-bottom: 16px;
   &__input{
     display: none;
     &:checked + .toggle__box {
-      border-color: #BC9CFF;
+      border-color: $purple;
       &:after {
         left: 20px;
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        background: $gr-primary-rgba;
       }
     }
   }

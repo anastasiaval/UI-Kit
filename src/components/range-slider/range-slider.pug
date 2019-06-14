@@ -1,6 +1,12 @@
 include ../text/text
-.form__wrapper
-    +text('h3', 'Range Slider', 'label')
-    span.range-slider__text= '5 000₽ - 10 000₽'
-.range-slider
+
+//-
+    options.text - obj - text component options
+    options.rangeText - string - slider range
+
+mixin range-slider(options)
+    .flex-bw
+        +text(options.text)
+        span.range-slider__text= options.rangeText
+    .range-slider
 

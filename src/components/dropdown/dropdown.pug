@@ -1,8 +1,28 @@
 include ../text/text
+
+//-
+    options.title - string - left label
+    options.extraTitle - string - right label
+    options.defaultText - string - text on the result field of the element
+    options.arr - array of obj - {item: string, num: number} item: name of the option, num: start number
+    options.buttons - bool - buttons at the bottom of the element
+    options.positionMod - string|array - position of the element
+
 mixin dropdown(options)
-    .dropdown
+    -var position = '';
+    if options.positionMod
+        if (typeof (options.positionMod) !== 'string')
+            each val in options.positionMod
+                -position += 'dropdown_' + val + ' ';
+        else
+            -position = 'dropdown_' + options.positionMod;
+    .dropdown(class= position)
         .dropdown__title
-            +text('span', options.title, 'label')
+            +text({
+                tag: 'span',
+                text: options.title,
+                type: 'label'
+            })
             if (options.extraTitle)
                 span.dropdown__extra-title= options.extraTitle
         .dropdown__drop
@@ -11,10 +31,18 @@ mixin dropdown(options)
         .dropdown__options
             each val in options.arr
                 .dropdown__option
-                    +text('h3', val.item, 'label')
+                    +text({
+                        tag: 'h3',
+                        text: val.item,
+                        type: 'label'
+                    })
                     .dropdown__counter
                         span.dropdown__counter-btn.dropdown__counter-btn_less -
-                        +text('span', val.num, 'label')
+                        +text({
+                            tag: 'span',
+                            text: val.num,
+                            type: 'label'
+                        })
                         span.dropdown__counter-btn.dropdown__counter-btn_more +
             if options.buttons
                 .dropdown__option

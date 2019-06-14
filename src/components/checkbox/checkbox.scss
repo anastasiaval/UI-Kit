@@ -3,11 +3,11 @@
 .checkbox {
   cursor: pointer;
   display: block;
-  margin-top: 16px;
+  margin-top: 10px;
   &__input{
     display: none;
     &:checked ~ .checkbox__wrapper .checkbox__box {
-      border-color: #BC9CFF;
+      border-color: $purple;
       .checkbox__check {
         visibility: visible;
         opacity: 1;
@@ -26,6 +26,7 @@
     &_rich {
       color: $dark-shade-50;
       font-size: 12px;
+      margin-top: 5px;
     }
   }
   &__wrapper {
@@ -44,12 +45,12 @@
   }
   &__check {
     visibility: hidden;
-    transition: visibility 0s, opacity 0.2s;
+    transition: opacity 0.2s;
     opacity: 0;
     position: absolute;
     height: 8px;
     width: 6px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $gr-primary-rgba;
     margin: 5px 6px;
     transform: rotate(45deg);
     &_cover {

@@ -3,7 +3,7 @@ $(function () {
 
     rangeSlider.slider({
         animate: "slow",
-        max: 16000,
+        max: 15500,
         min: 100,
         step: 100,
         range: true,
@@ -12,6 +12,6 @@ $(function () {
 
     rangeSlider.on('slidestop', (event, ui) => {
         $('.range-slider__text').text(`${ui.values[0]}₽ - ${ui.values[1]}₽`);
-    } );
+    });
 });
 

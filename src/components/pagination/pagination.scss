@@ -1,13 +1,13 @@
 @import "../../assets/variables";
 
 .pagination {
+  padding-left: 7px;
   .paginationjs-pages {
     margin-bottom: 10px;
-    margin-top: 16px;
     ul {
       display: flex;
-      justify-content: space-between;
       list-style-type: none;
+      margin-left: -7px;
     }
     li {
       text-align: center;
@@ -17,7 +17,7 @@
   .paginationjs-page, .paginationjs-ellipsis {
     a {
       text-decoration: none;
-      color: rgba(31, 32, 65, 0.5);
+      color: $dark-shade-50;
       width: 40px;
       height: 40px;
       display: block;
@@ -30,7 +30,7 @@
     display: block;
     padding: 12px 0;
     color: #FFFFFF;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $gr-secondary;
     border-radius: 22px;
   }
   .paginationjs-next i, .paginationjs-prev i {
@@ -40,8 +40,11 @@
     padding-left: 8px;
   }
   .paginationjs-pages .active {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $gr-primary-rgba;
     border-radius: 22px;
+  }
+  .paginationjs-pages .active a {
+    color: #FFFFFF;
   }
 }
 

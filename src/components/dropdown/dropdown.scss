@@ -3,7 +3,6 @@
 .dropdown {
   position: relative;
   &__title {
-    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
@@ -27,6 +26,7 @@
   }
   &__icon {
     color: $dark-shade-50;
+    margin-right: -2px;
   }
   &__options {
     position: absolute;
@@ -77,6 +77,12 @@
     &_apply {
       color: $purple;
     }
+  }
+  &_mb-20 {
+    margin-bottom: 20px;
+  }
+  &_mb-24 {
+    margin-bottom: 24px;
   }
 }
 

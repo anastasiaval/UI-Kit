@@ -3,8 +3,7 @@
 .radio {
   cursor: pointer;
   display: inline-block;
-  margin-right: 20px;
-  margin-top: 16px;
+  margin-right: 16px;
   color: $dark-shade-50;
   &__input{
     display: none;
@@ -14,7 +13,7 @@
     &:checked ~ .radio__box {
       border-color: #BC9CFF;
       &:after {
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        background: $gr-primary-rgba;
       }
     }
   }
