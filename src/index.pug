@@ -76,14 +76,14 @@ html(lang="en")
                             placeholder: 'ДД.ММ.ГГГГ',
                             mod: 'datepicker',
                             labelMod: 'datepicker',
-                            positionMod: 'mb-40'
+                            positionMod: ['mb-40', 'kit-datepicker']
                         })
                         +input({
                             leftLabel: 'date Dropdown',
                             placeholder: 'ДД.ММ.ГГГГ',
                             mod: 'datepicker',
                             labelMod: 'datepicker',
-                            positionMod: 'mb-40'
+                            positionMod: ['mb-40', 'kit-datepicker']
                         })
                 form.form_narrow
                     +input({
@@ -294,7 +294,7 @@ html(lang="en")
                             'Без вечеринок и&nbsp;мероприятий',
                             'Время прибытия&nbsp;&mdash; после 13:00, а&nbsp;выезд до&nbsp;12:00'
                         ])
-        .content.flex-bw
+        .content.content_btm-100.flex-bw
             .form_mr-72
                 +room-info({icon: 'mood', heading: 'Комфорт', text: 'Шумопоглощающие стены'})
                 +room-info({icon: 'location_city', heading: 'Удобство', text: 'Окно в каждой из спален'})
@@ -307,4 +307,15 @@ html(lang="en")
                     isLiked: true,
                     text: 'Великолепный матрас на&nbsp;кровати в&nbsp;основной спальне! А&nbsp;пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару&nbsp;&mdash; никто не&nbsp;жаловался из&nbsp;соседей.'
                 })
+        .content.content_btm-100.flex-bw
+            div
+                include components/search-room/search-room
+                p Регистрация аккаунта
+            div
+                p 888
+                p Войти
+            div
+                p datepicker
+                p 888
+                p 840
 

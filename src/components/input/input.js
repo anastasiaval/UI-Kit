@@ -15,7 +15,7 @@ $(function() {
 // datepicker
 require('jquery-ui-bundle');
 
-function datepicker($input, onSelect, format) {
+export function datepicker($input, onSelect, format) {
     $input.datepicker({
         showButtonPanel: true,
         showOtherMonths: true,
@@ -56,7 +56,7 @@ function datepicker($input, onSelect, format) {
 }
 
 $(function () {
-    const $datepicker = $('.flex-bw').find('.input_datepicker');
+    const $datepicker = $('.input_kit-datepicker');
     const datepickerOnSelect = function(dateText, inst, extensionRange) {
         $datepicker[0].value = extensionRange.startDateText;
         $datepicker[1].value = extensionRange.endDateText;

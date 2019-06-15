@@ -1,0 +1,40 @@
+include ../text/text
+include ../input/input
+include ../dropdown/dropdown
+include ../button/button
+
+.card
+    +text({
+        tag: 'h1',
+        text: 'Найдём номера под ваши&nbsp;пожелания',
+        type: 'title',
+        positionMod: 'mb-20'
+    })
+    .flex-bw
+        +input({
+            leftLabel: 'прибытие',
+            placeholder: 'ДД.ММ.ГГГГ',
+            mod: 'datepicker',
+            labelMod: 'datepicker',
+            positionMod: ['mb-20', 'card-datepicker']
+        })
+        +input({
+            leftLabel: 'выезд',
+            placeholder: 'ДД.ММ.ГГГГ',
+            mod: 'datepicker',
+            labelMod: 'datepicker',
+            positionMod: ['mb-20', 'card-datepicker']
+        })
+    +dropdown({
+        title: 'гости',
+        defaultText: 'Сколько гостей',
+        arr: [
+            {item: 'взрослые', num: 0},
+            {item: 'дети', num: 0},
+            {item: 'младенцы', num: 0},
+        ],
+        buttons: true,
+        positionMod: 'mb-30'
+    })
+    +button({type: 'submit', text: 'подобрать номер'})
+

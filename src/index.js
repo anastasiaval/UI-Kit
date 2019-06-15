@@ -32,4 +32,5 @@ import 'components/rate-btn/star-rating-plugin';
 import 'components/pagination/pagination-plugin';
 import 'components/pagination/pagination';
 import 'components/checkbox-expandable/checkbox-expandable';
+import 'components/search-room/search-room';
 
