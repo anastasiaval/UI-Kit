@@ -18,6 +18,6 @@ mixin button(options)
     if options.type === 'border'
         button.btn.btn_border(class= position)= options.text
     if options.type === 'submit'
-        button.btn.btn_bg.btn_submit(class= position)= options.text
+        button.btn.btn_bg.btn_submit(class= position type= 'submit')= options.text
             i.material-icons.btn_submit__icon arrow_forward
 

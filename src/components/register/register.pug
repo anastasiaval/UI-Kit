@@ -1,0 +1,50 @@
+include ../text/text
+include ../input/input
+include ../radio/radio
+include ../toggle/toggle
+include ../button/button
+
+.card
+    +text({
+        tag: 'h1',
+        text: 'Регистрация аккаунта',
+        type: 'title',
+        positionMod: 'mb-20'
+    })
+    form
+        +input({
+            placeholder: 'Имя',
+            type: 'text',
+            positionMod: 'mb-10'
+        })
+        +input({
+            placeholder: 'Фамилия',
+            type: 'text',
+            positionMod: 'mb-10'
+        })
+        +radio({name: 'gender', value: 'male', text: 'Мужчина', checked: true})
+        +radio({name: 'gender', value: 'female', text: 'Женщина', checked: false, positionMod: 'mb-20'})
+        +input({
+            leftLabel: 'дата рождения',
+            mod: 'date',
+            placeholder: 'ДД.ММ.ГГГГ',
+            type: 'text',
+            positionMod: 'mb-20'
+        })
+        +input({
+            leftLabel: 'данные для входа в сервис',
+            placeholder: 'Email',
+            type: 'email',
+            positionMod: 'mb-10'
+        })
+        +input({
+            placeholder: 'Пароль',
+            type: 'password',
+            positionMod: 'mb-10'
+        })
+        +toggle({text: 'Получать спецпредложения', checked: false, positionMod: 'mb-24'})
+        +button({type: 'submit', text: 'перейти к оплате', positionMod: 'mb-30'})
+    .flex-bw
+        span.card__span Уже есть аккаунт на Toxin
+        +button({type: 'border', text: 'войти'})
+

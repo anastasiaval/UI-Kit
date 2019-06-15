@@ -3,9 +3,17 @@
     options.value - string - input value
     options.text - string - input text
     options.checked - bool - if true checked='checked'
+    options.positionMod - string|array - position of the element
 
 mixin radio(options)
-    label.radio
+    -var position = '';
+    if options.positionMod
+        if (typeof (options.positionMod) !== 'string')
+            each val in options.positionMod
+                -position += 'radio_' + val + ' ';
+        else
+            -position = 'radio_' + options.positionMod;
+    label.radio(class= position)
         input.radio__input(name= options.name value= options.value type='radio' checked= options.checked)
         span.radio__box
         span.radio__label= options.text

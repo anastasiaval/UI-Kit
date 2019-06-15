@@ -19,11 +19,12 @@ mixin input(options)
             -position = 'input_' + options.positionMod;
     label(class= (options.labelMod ? 'input__label_' + options.labelMod : ''))
         .input__label
-            +text({
-                tag: 'span',
-                text: options.leftLabel,
-                type: 'label'
-            })
+            if options.leftLabel
+                +text({
+                    tag: 'span',
+                    text: options.leftLabel,
+                    type: 'label'
+                })
             if options.rightLabel
                 span.input__label_right= options.rightLabel
         if options.mod

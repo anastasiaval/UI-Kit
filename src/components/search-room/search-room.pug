@@ -10,31 +10,32 @@ include ../button/button
         type: 'title',
         positionMod: 'mb-20'
     })
-    .flex-bw
-        +input({
-            leftLabel: 'прибытие',
-            placeholder: 'ДД.ММ.ГГГГ',
-            mod: 'datepicker',
-            labelMod: 'datepicker',
-            positionMod: ['mb-20', 'card-datepicker']
+    form
+        .flex-bw
+            +input({
+                leftLabel: 'прибытие',
+                placeholder: 'ДД.ММ.ГГГГ',
+                mod: 'datepicker',
+                labelMod: 'datepicker',
+                positionMod: ['mb-20', 'card-datepicker']
+            })
+            +input({
+                leftLabel: 'выезд',
+                placeholder: 'ДД.ММ.ГГГГ',
+                mod: 'datepicker',
+                labelMod: 'datepicker',
+                positionMod: ['mb-20', 'card-datepicker']
+            })
+        +dropdown({
+            title: 'гости',
+            defaultText: 'Сколько гостей',
+            arr: [
+                {item: 'взрослые', num: 0},
+                {item: 'дети', num: 0},
+                {item: 'младенцы', num: 0},
+            ],
+            buttons: true,
+            positionMod: 'mb-30'
         })
-        +input({
-            leftLabel: 'выезд',
-            placeholder: 'ДД.ММ.ГГГГ',
-            mod: 'datepicker',
-            labelMod: 'datepicker',
-            positionMod: ['mb-20', 'card-datepicker']
-        })
-    +dropdown({
-        title: 'гости',
-        defaultText: 'Сколько гостей',
-        arr: [
-            {item: 'взрослые', num: 0},
-            {item: 'дети', num: 0},
-            {item: 'младенцы', num: 0},
-        ],
-        buttons: true,
-        positionMod: 'mb-30'
-    })
-    +button({type: 'submit', text: 'подобрать номер'})
+        +button({type: 'submit', text: 'подобрать номер'})
 

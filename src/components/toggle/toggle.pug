@@ -1,9 +1,18 @@
 //-
     options.checked - bool - if true checked='checked'
     options.text - string - option text
+    options.positionMod - string|array - position of the element
+
 
 mixin toggle(options)
-    label.toggle
+    -var position = '';
+    if options.positionMod
+        if (typeof (options.positionMod) !== 'string')
+            each val in options.positionMod
+                -position += 'toggle_' + val + ' ';
+        else
+            -position = 'toggle_' + options.positionMod;
+    label.toggle(class= position)
         input.toggle__input(type='checkbox' checked= options.checked)
         span.toggle__box
         |   !{options.text}
