@@ -1,0 +1,81 @@
+@import "../../assets/variables";
+@import "../../assets/mixins";
+
+.room-booking {
+  @include card;
+  &__flex {
+    @include flex-bw
+  }
+  &__text {
+    @include flex-bw;
+    font-family: Montserrat-Bold, sans-serif;
+    margin-bottom: 20px;
+    &_num {
+      color: $dark-shade-100;
+      font-size: 14px;
+    }
+    &_number {
+      color: $dark-shade-100;
+      font-size: 18px;
+      padding: 0 5px;
+    }
+    &_type {
+      color: $purple;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    &_price {
+      font-size: 14px;
+      color: $dark-shade-50;
+      margin-right: 5px;
+    }
+    &_price-ext {
+      font-family: Montserrat, sans-serif;
+    }
+  }
+  &__count {
+    @include flex-bw;
+    margin-bottom: 10px;
+    padding: 3px 0;
+    &_price {
+      margin-right: 5px;
+    }
+    &_days {
+      margin-left: 5px;
+    }
+    &_service {
+      margin-right: 5px;
+    }
+    &_service-price {
+      margin-left: 5px;
+    }
+  }
+  &__wrapper {
+    @include flex-bw;
+    width: 240px;
+  }
+  &__info {
+    width: 20px;
+    height: 20px;
+    border: 1px solid $dark-shade-25;
+    color: $dark-shade-25;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
+    &:hover {
+      border-color: $dark-shade-50;
+      color: $dark-shade-50;
+    }
+  }
+  &__result {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    margin-bottom: 25px;
+  }
+  &__result-line {
+    border-bottom: 1px dotted $dark-shade-25;
+  }
+}
+

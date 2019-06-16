@@ -1,0 +1,12 @@
+@import "../../assets/mixins";
+
+.login {
+  @include card;
+  &__reg {
+    @include flex-bw;
+    &_text {
+      @include card-text
+    }
+  }
+}
+

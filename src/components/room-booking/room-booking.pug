@@ -1,0 +1,80 @@
+include ../text/text
+include ../input/input
+include ../dropdown/dropdown
+include ../button/button
+
+.room-booking
+    .room-booking__text
+        div
+            span.room-booking__text_num №
+            span.room-booking__text_number 888
+            span.room-booking__text_type люкс
+        div
+            span.room-booking__text_price 9 900₽
+            span.room-booking__text_price.room-booking__text_price-ext в сутки
+    form
+        .room-booking__flex
+            +input({
+                leftLabel: 'прибытие',
+                placeholder: 'ДД.ММ.ГГГГ',
+                mod: 'datepicker',
+                labelMod: 'datepicker',
+                positionMod: ['mb-20', 'card-datepicker']
+            })
+            +input({
+                leftLabel: 'выезд',
+                placeholder: 'ДД.ММ.ГГГГ',
+                mod: 'datepicker',
+                labelMod: 'datepicker',
+                positionMod: ['mb-20', 'card-datepicker']
+            })
+        +dropdown({
+            title: 'гости',
+            defaultText: 'Сколько гостей',
+            arr: [
+                {item: 'взрослые', num: 0},
+                {item: 'дети', num: 0},
+                {item: 'младенцы', num: 0},
+            ],
+            buttons: true,
+            positionMod: 'mb-30'
+        })
+        .room-booking__count
+            div
+                span.room-booking__count_price 9 990₽
+                span x
+                span.room-booking__count_days 4 суток
+            div
+                span.room-booking__count_days-result 39 960₽
+        .room-booking__count
+            .room-booking__wrapper
+                div
+                    span.room-booking__count_service Сбор за услуги:
+                    span.room-booking__count_discount скидка
+                    span.room-booking__count_service-price 2 179₽
+                div
+                    span.room-booking__info i
+            div
+                span.room-booking__count_service-result 0₽
+        .room-booking__count
+            .room-booking__wrapper
+                div
+                    span.room-booking__count_ext-service Сбор за дополнительные услуги
+                div
+                    span.room-booking__info i
+            div
+                span.room-booking__count_ext-service-result 300₽
+        .room-booking__result
+            +text({
+                tag: 'span',
+                text: 'Итого',
+                type: 'item-title'
+            })
+            .room-booking__result-line
+            +text({
+                tag: 'span',
+                text: '38 081₽',
+                type: 'item-title'
+            })
+        +button({type: 'submit', text: 'забронировать'})
+

@@ -1,0 +1,9 @@
+@import "../../assets/mixins";
+
+.search-room {
+  @include card;
+  &__flex {
+    @include flex-bw;
+  }
+}
+

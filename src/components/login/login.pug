@@ -1,0 +1,27 @@
+include ../text/text
+include ../input/input
+include ../button/button
+
+.login
+    +text({
+        tag: 'h1',
+        text: 'Войти',
+        type: 'title',
+        positionMod: 'mb-20'
+    })
+    form
+        +input({
+            placeholder: 'Email',
+            type: 'email',
+            positionMod: 'mb-10'
+        })
+        +input({
+            placeholder: 'Пароль',
+            type: 'password',
+            positionMod: 'mb-20'
+        })
+        +button({type: 'submit', text: 'забронировать', positionMod: 'mb-30'})
+    .login__reg
+        span.login__reg_text Нет аккаунта на Toxin?
+        +button({type: 'border', text: 'создать'})
+

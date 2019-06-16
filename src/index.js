@@ -19,6 +19,10 @@ import 'components/bullet-list/bullet-list.scss';
 import 'components/review/review.scss';
 import 'components/room-info/room-info.scss';
 import 'components/checkbox-expandable/checkbox-expandable.scss';
+import 'components/room-booking/room-booking.scss';
+import 'components/login/login.scss';
+import 'components/register/register.scss';
+import 'components/search-room/search-room.scss';
 
 require('jquery-ui-bundle');
 import 'components/dropdown/dropdown';

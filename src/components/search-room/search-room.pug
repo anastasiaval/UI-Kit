@@ -3,7 +3,7 @@ include ../input/input
 include ../dropdown/dropdown
 include ../button/button
 
-.card
+.search-room
     +text({
         tag: 'h1',
         text: 'Найдём номера под ваши&nbsp;пожелания',
@@ -11,7 +11,7 @@ include ../button/button
         positionMod: 'mb-20'
     })
     form
-        .flex-bw
+        .search-room__flex
             +input({
                 leftLabel: 'прибытие',
                 placeholder: 'ДД.ММ.ГГГГ',

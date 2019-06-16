@@ -4,7 +4,7 @@ include ../radio/radio
 include ../toggle/toggle
 include ../button/button
 
-.card
+.register
     +text({
         tag: 'h1',
         text: 'Регистрация аккаунта',
@@ -44,7 +44,7 @@ include ../button/button
         })
         +toggle({text: 'Получать спецпредложения', checked: false, positionMod: 'mb-24'})
         +button({type: 'submit', text: 'перейти к оплате', positionMod: 'mb-30'})
-    .flex-bw
-        span.card__span Уже есть аккаунт на Toxin
+    .register__login
+        span.register__login_text Уже есть аккаунт на Toxin
         +button({type: 'border', text: 'войти'})
 
