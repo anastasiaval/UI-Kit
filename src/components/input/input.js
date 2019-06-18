@@ -12,7 +12,6 @@ $(function() {
 
 });
 
-// datepicker
 require('jquery-ui-bundle');
 
 export function datepicker($input, onSelect, format) {
@@ -56,13 +55,13 @@ export function datepicker($input, onSelect, format) {
 }
 
 $(function () {
-    const $datepicker = $('.input_kit-datepicker');
+    const $datepicker = $('.input_kit-calendar');
     const datepickerOnSelect = function(dateText, inst, extensionRange) {
         $datepicker[0].value = extensionRange.startDateText;
         $datepicker[1].value = extensionRange.endDateText;
     };
 
-    const $filterDatepicker = $('.input_filter-datepicker');
+    const $filterDatepicker = $('.input_filter-calendar');
     const filterDatepickerOnSelect = function(dateText, inst, extensionRange) {
         $filterDatepicker.val(extensionRange.startDateText + ' - ' + extensionRange.endDateText);
     };

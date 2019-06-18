@@ -76,20 +76,20 @@ html(lang="en")
                             placeholder: 'ДД.ММ.ГГГГ',
                             mod: 'datepicker',
                             labelMod: 'datepicker',
-                            positionMod: ['mb-40', 'kit-datepicker']
+                            positionMod: ['mb-40', 'kit-calendar']
                         })
                         +input({
                             leftLabel: 'date Dropdown',
                             placeholder: 'ДД.ММ.ГГГГ',
                             mod: 'datepicker',
                             labelMod: 'datepicker',
-                            positionMod: ['mb-40', 'kit-datepicker']
+                            positionMod: ['mb-40', 'kit-calendar']
                         })
                 form.form_narrow
                     +input({
                         leftLabel: 'filter date dropdown',
-                        mod: 'filter-datepicker',
-                        labelMod: 'filter-datepicker',
+                        mod: 'filter-calendar',
+                        labelMod: 'filter-calendar',
                         positionMod: 'mb-40'
                     })
                     +input({
@@ -315,7 +315,7 @@ html(lang="en")
                 include components/room-booking/room-booking
                 include components/login/login
             div
-                p datepicker
+                include components/calendar/calendar
                 p 888
                 p 840
 

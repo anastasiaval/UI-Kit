@@ -37,4 +37,6 @@ import 'components/pagination/pagination-plugin';
 import 'components/pagination/pagination';
 import 'components/checkbox-expandable/checkbox-expandable';
 import 'components/search-room/search-room';
+import 'components/room-booking/room-booking';
+import 'components/calendar/calendar';
 

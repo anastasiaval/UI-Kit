@@ -28,7 +28,7 @@ mixin input(options)
             if options.rightLabel
                 span.input__label_right= options.rightLabel
         if options.mod
-            if options.mod === 'datepicker' || options.mod === 'filter-datepicker'
+            if options.mod === 'datepicker' || options.mod === 'filter-calendar'
                 input.input(class= position class= 'input_' + options.mod type= options.type, placeholder= options.placeholder readonly)
             else
                 input.input(class= position class= 'input_' + options.mod type= options.type, placeholder= options.placeholder)
@@ -37,6 +37,6 @@ mixin input(options)
         if options.labelMod === 'subscribe'
             button.input__submit(type='submit')
                 i.material-icons.input__icon.input__icon_subscribe arrow_forward
-        if options.mod === 'datepicker' || options.mod === 'filter-datepicker'
+        if options.mod === 'datepicker' || options.mod === 'filter-calendar'
             i.material-icons.input__icon(class= 'input__icon_' + options.labelMod) keyboard_arrow_down
 
