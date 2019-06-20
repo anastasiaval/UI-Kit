@@ -1,0 +1,100 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.room-cards{
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+  .slick-list {
+    border-radius: 4px 4px 0 0;
+  }
+  &__item {
+    width: 270px;
+    height: 257px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;
+    margin: 40px 0;
+  }
+  &__slider-img {
+    &_image-2 {
+      filter:contrast(150%);
+    }
+    &_image-3 {
+      filter:hue-rotate(180deg);
+    }
+    &_image-4 {
+      filter:sepia(100%);
+    }
+  }
+  &__slider {
+    width: 270px;
+    height: 152px;
+    &:hover .room-cards__arrow {
+      opacity: 1;
+    }
+    .slick-dots {
+      bottom: 0;
+      text-align: right;
+    }
+    .slick-dots li button:before {
+      content: '';
+      border: 1px solid #FFFFFF;
+      box-sizing: border-box;
+      box-shadow: 0 5px 5px rgba(31, 32, 65, 0.3);
+      width: 7.5px;
+      height: 7.5px;
+      border-radius: 50%;
+      opacity: 1;
+    }
+    .slick-dots .slick-active button:before {
+      background: #FFFFFF;
+      opacity: 1;
+    }
+  }
+  &__arrow {
+    color: #FFFFFF;
+    position: absolute;
+    top: 54px;
+    opacity: 0;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity 0.3s;
+    &_right {
+      right: 0;
+    }
+  }
+  &__info-wr {
+    padding: 20px;
+  }
+  &__info:first-child {
+    border-bottom: 1px solid $dark-shade-1;
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+  }
+  &__info {
+    @include flex-bw;
+    font-family: Montserrat-Bold, sans-serif;
+    &_num {
+      font-size: 14px;
+      color: $dark-shade-100;
+    }
+    &_number {
+      font-size: 14px;
+      color: $dark-shade-100;
+    }
+    &_cat {
+      font-size: 14px;
+      color: $purple;
+    }
+    &_text-num {
+      font-size: 14px;
+      color: $dark-shade-50;
+    }
+    &_text {
+      font-family: Montserrat, sans-serif;
+    }
+  }
+}
+

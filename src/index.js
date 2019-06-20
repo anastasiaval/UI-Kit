@@ -23,20 +23,25 @@ import 'components/room-booking/room-booking.scss';
 import 'components/login/login.scss';
 import 'components/register/register.scss';
 import 'components/search-room/search-room.scss';
+import 'components/room-cards/room-cards.scss';
+import 'slick-carousel/slick/slick.scss'
+import 'slick-carousel/slick/slick-theme.scss'
 
 require('jquery-ui-bundle');
+require('slick-carousel');
 import 'components/dropdown/dropdown';
 import 'components/input/input';
 import 'components/input/datepicker-ext';
 import 'components/like-btn/like-btn';
 import 'components/range-slider/range-slider';
 import 'components/range-slider/jQueryUI-TouchPunch';
-import 'components/rate-btn/rate-btn';
 import 'components/rate-btn/star-rating-plugin';
+import 'components/rate-btn/rate-btn';
 import 'components/pagination/pagination-plugin';
 import 'components/pagination/pagination';
 import 'components/checkbox-expandable/checkbox-expandable';
 import 'components/search-room/search-room';
 import 'components/room-booking/room-booking';
 import 'components/calendar/calendar';
+import 'components/room-cards/room-cards';
 

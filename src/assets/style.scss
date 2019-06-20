@@ -87,6 +87,11 @@ body {
 
 .content {
   margin: 0 140px;
+  &_bg-kit {
+    margin: 0;
+    padding: 150px 100px;
+    background: #E5E5E5;
+  }
   &_btm-167 {
     margin-bottom: 167px;
   }
@@ -94,6 +99,9 @@ body {
     margin-bottom: 100px;
   }
   &_top-140 {
+    margin-top: 140px;
+  }
+  &_top-150 {
     margin-top: 140px;
   }
 }

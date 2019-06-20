@@ -1,0 +1,18 @@
+[
+  {
+    "number": 888,
+    "category": "люкс",
+    "price": "9900",
+    "currency": "\u20BD",
+    "rating": 5,
+    "reviews": 145
+  },
+  {
+    "number": 840,
+    "category": null,
+    "price": "9900",
+    "currency": "\u20BD",
+    "rating": 4,
+    "reviews": 65
+  }
+]
