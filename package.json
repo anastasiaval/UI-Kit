@@ -48,6 +48,7 @@
   "dependencies": {
     "inputmask": "^4.0.8",
     "jquery": "^3.4.1",
-    "jquery-ui-bundle": "^1.12.1-migrate"
+    "jquery-ui-bundle": "^1.12.1-migrate",
+    "slick-carousel": "^1.8.1"
   }
 }

@@ -20,6 +20,18 @@ module.exports = {
     module: {
         rules: [
             {
+                type: 'javascript/auto',
+                test: /\.json$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'assets/db/'
+                    }
+                }
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
@@ -41,7 +53,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(svg|ttf|woff)$/,
+                test: /\.(svg|ttf|woff|eot)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]',
