@@ -325,10 +325,24 @@ html(lang="en")
                     {item: 'About Us'},
                     {item: 'Services', subItem: ['service 1', 'service 2']},
                     {item: 'Careers'},
-                    {item: 'News', subItem: ['service 1', 'service 2']},
+                    {item: 'News'},
                     {item: 'Documentation'}
                     ],
                 isGuest: true,
+                active: 'Home'
+            })
+        .content_header-kit
+            +header({
+                menu: [
+                    {item: 'Home'},
+                    {item: 'About Us'},
+                    {item: 'Services', subItem: ['service 1', 'service 2']},
+                    {item: 'Careers'},
+                    {item: 'News'},
+                    {item: 'Documentation'}
+                ],
+                isGuest: false,
+                userName: 'Cosmin Negoita',
                 active: 'Home'
             })
 

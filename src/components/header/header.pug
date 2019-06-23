@@ -1,9 +1,11 @@
 include ../logo/logo
+include ../button/button
 
 //-
     options.menu - array - menu & submenu items [{item: string, subItem: array}]
     options.isGuest - bool - true if logged in
     options.active - string - active page
+    options.userName - string - username
 
 mixin header(options)
     .header
@@ -28,4 +30,10 @@ mixin header(options)
                                 each value in val.subItem
                                     li.header__nav-item.header__nav-item_sub
                                         a.header__nav-link(href='')=value
+            if (options.isGuest)
+                .header__btn
+                    +button({type: 'border', text: 'Login', positionMod: 'mr-20'})
+                    +button({type: 'bg', text: 'REGISTER'})
+            else
+                span.header__username= options.userName
 
