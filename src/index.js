@@ -26,6 +26,7 @@ import 'components/search-room/search-room.scss';
 import 'components/room-cards/room-cards.scss';
 import 'slick-carousel/slick/slick.scss'
 import 'slick-carousel/slick/slick-theme.scss'
+import 'components/header/header.scss'
 
 require('jquery-ui-bundle');
 require('slick-carousel');
@@ -44,4 +45,5 @@ import 'components/search-room/search-room';
 import 'components/room-booking/room-booking';
 import 'components/calendar/calendar';
 import 'components/room-cards/room-cards';
+import 'components/header/header'
 

@@ -75,7 +75,6 @@ $.ajax({
     url: 'assets/db/room-cards.json',
     dataType: 'json',
     success: function (data) {
-        console.log(data);
         let cards = new RoomCards(data, '.room-cards');
         cards.render();
     },

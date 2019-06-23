@@ -1,0 +1,67 @@
+@import "../../assets/variables";
+@import "../../assets/mixins";
+
+.header {
+  background: #FFFFFF;
+  height: 70px;
+  padding: 0 140px;
+  position: relative;
+  z-index: 0;
+  @include flex-bw;
+  &__logo {
+    margin: auto 0;
+    display: flex;
+  }
+  &__toxin {
+    margin: auto 12px;
+  }
+  &__menu {
+    margin: auto 0;
+  }
+  &__nav {
+    &_main {
+      display: flex;
+    }
+    &_sub {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: -15px;
+      padding: 15px;
+      line-height: 24px;
+      white-space: nowrap;
+      background: white;
+      border-radius: 4px;
+      border: 1px solid $dark-shade-1;
+    }
+  }
+  &__nav-item {
+    list-style-type: none;
+    margin-right: 30px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      .header__nav-icon, .header__nav-link {
+        color: $dark-shade-75;
+      }
+    }
+    &_sub {
+      margin: 0;
+    }
+  }
+  &__nav-link {
+    text-decoration: none;
+    color: $dark-shade-50;
+    &_active {
+      color: $dark-shade-75;
+      font-family: Montserrat-Bold, sans-serif;
+    }
+  }
+  &__nav-icon {
+    line-height: 18px;
+    padding-top: 1px;
+    color: $dark-shade-50;
+  }
+}
+

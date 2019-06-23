@@ -12,6 +12,7 @@ include components/checkbox-expandable/checkbox-expandable
 include components/room-info/room-info
 include components/bullet-list/bullet-list
 include components/review/review
+include components/header/header
 
 doctype html
 html(lang="en")
@@ -317,4 +318,17 @@ html(lang="en")
             div
                 include components/calendar/calendar
                 include components/room-cards/room-cards
+        .content_header-kit
+            +header({
+                menu: [
+                    {item: 'Home'},
+                    {item: 'About Us'},
+                    {item: 'Services', subItem: ['service 1', 'service 2']},
+                    {item: 'Careers'},
+                    {item: 'News', subItem: ['service 1', 'service 2']},
+                    {item: 'Documentation'}
+                    ],
+                isGuest: true,
+                active: 'Home'
+            })
 
