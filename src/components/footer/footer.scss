@@ -1,0 +1,60 @@
+@import "../../assets/variables";
+@import "../../assets/mixins";
+
+.footer {
+  background: #FFFFFF;
+  &__main {
+    padding: 100px 140px;
+    box-shadow: 0 1px 0 $dark-shade-1;
+    @include flex-bw;
+  }
+  &__col {
+    max-width: 260px;
+  }
+  &__logo {
+    display: flex;
+    z-index: 0;
+    position: relative;
+  }
+  &__toxin {
+    margin: auto 12px;
+  }
+  &__text {
+    line-height: 24px;
+    margin: 20px 0;
+  }
+  &__menu {
+    list-style-type: none;
+  }
+  &__menu-item {
+    margin-top: 20px;
+  }
+  &__menu-link {
+    text-decoration: none;
+    color: $dark-shade-50;
+    transition: color 0.3s;
+    &:hover {
+      color: $dark-shade-75;
+    }
+  }
+  &__btm-panel {
+    height: 70px;
+    padding: 0 140px;
+    box-shadow: 0 10px 20px $dark-shade-5;
+    align-items: center;
+    @include flex-bw;
+  }
+  &__social-icons {
+    font-size: 24px;
+    background: $gr-primary-rgba;
+    background-clip: text;
+    &_link {
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .fab {
+      display: inline;
+      color: transparent;
+    }
+  }
+}

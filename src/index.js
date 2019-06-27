@@ -1,5 +1,6 @@
 import 'assets/style.scss';
 import 'assets/variables.scss';
+import 'assets/fontawesome.css';
 import 'components/logo/logo.scss';
 import 'components/colors/colors.scss';
 import 'components/type/type.scss';
@@ -27,6 +28,8 @@ import 'components/room-cards/room-cards.scss';
 import 'slick-carousel/slick/slick.scss'
 import 'slick-carousel/slick/slick-theme.scss'
 import 'components/header/header.scss'
+import 'components/footer/footer.scss'
+import 'components/footer-mini/footer-mini.scss'
 
 require('jquery-ui-bundle');
 require('slick-carousel');
