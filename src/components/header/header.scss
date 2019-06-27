@@ -32,7 +32,7 @@
       display: none;
       position: absolute;
       z-index: 1;
-      top: 30px;
+      top: 40px;
       left: -15px;
       padding: 15px;
       line-height: 24px;
@@ -48,18 +48,27 @@
     display: flex;
     cursor: pointer;
     position: relative;
-    &:hover {
-      .header__nav-icon, .header__nav-link {
-        color: $dark-shade-75;
+    &_main {
+      padding: 12px 0;
+      &:hover {
+        .header__nav-icon, .header__nav-link:not(.header__nav-link_sub) {
+          color: $dark-shade-75;
+        }
       }
     }
     &_sub {
       margin: 0;
+      &:hover {
+        .header__nav-link_sub {
+          color: $dark-shade-75;
+        }
+      }
     }
   }
   &__nav-link {
     text-decoration: none;
     color: $dark-shade-50;
+    transition: color 0.3s;
     &_active {
       color: $dark-shade-75;
       font-family: Montserrat-Bold, sans-serif;

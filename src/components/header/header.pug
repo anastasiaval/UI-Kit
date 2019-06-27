@@ -20,7 +20,7 @@ mixin header(options)
         .header__menu
             ul.header__nav.header__nav_main
                 each val in options.menu
-                    li.header__nav-item
+                    li.header__nav-item.header__nav-item_main
                         if !val.subItem
                             a.header__nav-link(class= (val.item === options.active ? 'header__nav-link_active' : '') href='')= val.item
                         else
@@ -29,7 +29,7 @@ mixin header(options)
                             ul.header__nav.header__nav_sub
                                 each value in val.subItem
                                     li.header__nav-item.header__nav-item_sub
-                                        a.header__nav-link(href='')=value
+                                        a.header__nav-link.header__nav-link_sub(href='')=value
             if (options.isGuest)
                 .header__btn
                     +button({type: 'border', text: 'Login', positionMod: 'mr-20'})
