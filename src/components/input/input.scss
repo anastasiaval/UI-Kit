@@ -11,6 +11,7 @@
   color: $dark-shade-75;
   &::placeholder {
     color: $dark-shade-25;
+    transition: color 0.3s;
   }
   &:hover, :focus {
     &::placeholder {
