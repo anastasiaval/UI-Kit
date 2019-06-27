@@ -37,6 +37,18 @@
   url('fonts/MaterialIcons-Regular.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url('fonts/fa-brands-400.woff') format('woff'),
+  url('fonts/fa-brands-400.ttf') format('truetype'),
+  url('fonts/fa-brands-400.svg#fontawesome') format('svg'); }
+
+.fab {
+  font-family: 'Font Awesome 5 Brands'; }
+
 .material-icons {
   font-family: 'Material Icons';
   font-style: normal;
