@@ -31,9 +31,12 @@
     font-size: 24px;
     background: $gr-primary-rgba;
     background-clip: text;
+    width: 112px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
     &_link {
       text-decoration: none;
-      margin-left: 20px;
     }
     .fab {
       display: inline;
@@ -41,3 +44,4 @@
     }
   }
 }
+

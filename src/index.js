@@ -24,6 +24,7 @@ import 'components/room-booking/room-booking.scss';
 import 'components/login/login.scss';
 import 'components/register/register.scss';
 import 'components/search-room/search-room.scss';
+import 'components/calendar/calendar.scss';
 import 'components/room-cards/room-cards.scss';
 import 'slick-carousel/slick/slick.scss'
 import 'slick-carousel/slick/slick-theme.scss'

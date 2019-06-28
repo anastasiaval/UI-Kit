@@ -34,7 +34,8 @@
       opacity: 1;
     }
     .slick-dots {
-      bottom: 0;
+      bottom: 3px;
+      right: 12px;
       text-align: right;
     }
     .slick-dots li button:before {
@@ -46,6 +47,10 @@
       height: 7.5px;
       border-radius: 50%;
       opacity: 1;
+    }
+    .slick-dots li {
+      width: 11px;
+      margin: 0;
     }
     .slick-dots .slick-active button:before {
       background: #FFFFFF;
@@ -66,33 +71,42 @@
     }
   }
   &__info-wr {
-    padding: 20px;
+    padding: 22px 18px 22px 20px;
   }
   &__info:first-child {
     border-bottom: 1px solid $dark-shade-1;
-    padding-bottom: 12px;
-    margin-bottom: 10px;
+    padding-bottom: 9px;
+    margin-bottom: 8px;
+    line-height: 22px;
   }
   &__info {
     @include flex-bw;
     font-family: Montserrat-Bold, sans-serif;
+    line-height: 24px;
     &_num {
       font-size: 14px;
       color: $dark-shade-100;
     }
     &_number {
-      font-size: 14px;
+      font-size: 18px;
       color: $dark-shade-100;
     }
     &_cat {
       font-size: 14px;
       color: $purple;
+      font-family: Montserrat, sans-serif;
+      margin-left: 3px;
     }
     &_text-num {
       font-size: 14px;
       color: $dark-shade-50;
     }
     &_text {
+      font-size: 12px;
+      font-family: Montserrat, sans-serif;
+    }
+    &_text-r {
+      font-size: 14px;
       font-family: Montserrat, sans-serif;
     }
   }

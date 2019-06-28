@@ -11,6 +11,9 @@
   &__col {
     max-width: 260px;
   }
+  &__col:not(:nth-child(1)) {
+    margin-top: 3px;
+  }
   &__logo {
     display: flex;
     z-index: 0;
@@ -21,7 +24,7 @@
   }
   &__text {
     line-height: 24px;
-    margin: 20px 0;
+    margin: 17px 0 19px;
   }
   &__menu {
     list-style-type: none;
@@ -50,7 +53,7 @@
     background-clip: text;
     &_link {
       text-decoration: none;
-      margin-left: 20px;
+      margin-left: 22px;
     }
     .fab {
       display: inline;
@@ -58,3 +61,4 @@
     }
   }
 }
+

@@ -39,7 +39,7 @@ class RoomCards {
                                <span class="room-cards__info_number">${item.number}</span>`;
 
         if (item.category !== null) {
-            result += `<span class="room-cards__info_cat"> ${item.category}</span>`;
+            result += `<span class="room-cards__info_cat">${item.category}</span>`;
         }
 
         result += `</div>
@@ -52,7 +52,7 @@ class RoomCards {
                            <div class="rate" id="rate-${item.number}"></div>
                            <div>
                                <span class="room-cards__info_text-num">${item.reviews}</span>
-                               <span class="room-cards__info_text-num room-cards__info_text">Отзывов</span>
+                               <span class="room-cards__info_text-num room-cards__info_text-r">Отзывов</span>
                            </div>
                        </div>
                    </div>`;

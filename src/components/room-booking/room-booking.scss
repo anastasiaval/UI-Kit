@@ -9,14 +9,15 @@
   &__text {
     @include flex-bw;
     font-family: Montserrat-Bold, sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
+    line-height: 32px;
     &_num {
       color: $dark-shade-100;
       font-size: 14px;
     }
     &_number {
       color: $dark-shade-100;
-      font-size: 18px;
+      font-size: 21px;
       padding: 0 5px;
     }
     &_type {
@@ -27,16 +28,24 @@
     &_price {
       font-size: 14px;
       color: $dark-shade-50;
-      margin-right: 5px;
     }
     &_price-ext {
       font-family: Montserrat, sans-serif;
+      font-size: 12px;
+      margin-left: 5px;
+    }
+    &_result-price {
+      font-family: Montserrat-Bold, sans-serif;
+      font-size: 17px;
+      line-height: 24px;
+      color: $dark-shade-100;
     }
   }
   &__count {
     @include flex-bw;
     margin-bottom: 10px;
     padding: 3px 0;
+    position: relative;
     &_price {
       margin-right: 5px;
     }
@@ -67,15 +76,34 @@
     &:hover {
       border-color: $dark-shade-50;
       color: $dark-shade-50;
+      .room-booking__info-hint {
+        visibility: visible;
+      }
     }
+  }
+  &__info-hint {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: #FFFFFF;
+    border: 1px solid $dark-shade-25;
+    padding: 5px;
+    border-radius: 4px;
+    max-width: 320px;
+    font-size: 12px;
+    color: $dark-shade-50;
+    visibility: hidden;
+    transition: visibility 0.3s;
   }
   &__result {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    padding-top: 16px;
   }
   &__result-line {
     border-bottom: 1px dotted $dark-shade-25;
+    height: 18px;
   }
 }
 

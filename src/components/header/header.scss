@@ -15,6 +15,16 @@
   }
   &__btn {
     z-index: 0;
+    margin: auto 0;
+    .btn {
+      height: 34px;
+    }
+    .btn_border {
+      width: 79px;
+    }
+    .btn_bg {
+      width: 101px;
+    }
   }
   &__toxin {
     margin: auto 12px;
@@ -81,7 +91,8 @@
   }
   &__username {
     color: $dark-shade-50;
-    padding-left: 30px;
+    margin: auto 0;
+    padding: 6px 0 6px 30px;
     border-left: 1px solid $dark-shade-1;
   }
 }
