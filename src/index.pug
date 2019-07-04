@@ -56,11 +56,12 @@ html(lang="en")
                         rightLabel: 'Default',
                         defaultText: 'Сколько гостей',
                         arr: [
-                            {item: 'взрослые', num: 0},
-                            {item: 'дети', num: 0},
-                            {item: 'младенцы', num: 0},
+                            {item: 'взрослые', counterClass: 'adults', num: 0},
+                            {item: 'дети', counterClass: 'children', num: 0},
+                            {item: 'младенцы', counterClass: 'infants', num: 0},
                         ],
                         buttons: true,
+                        type: 'guests',
                         positionMod: 'mb-24'
                     })
                     +input({
@@ -188,11 +189,12 @@ html(lang="en")
                     extraTitle: 'Default',
                     defaultText: '2 спальни, 2 кровати...',
                     arr: [
-                        {item: 'спальни', num: 2},
-                        {item: 'кровати', num: 2},
-                        {item: 'ванные комнаты', num: 0},
+                        {item: 'спальни', counterClass: 'bedrooms', num: 2},
+                        {item: 'кровати', counterClass: 'beds', num: 2},
+                        {item: 'ванные комнаты', counterClass: 'bathrooms', num: 0},
                     ],
                     buttons: false,
+                    type: 'beds',
                     positionMod: 'mb-20'
                 })
                 +dropdown({
@@ -200,11 +202,12 @@ html(lang="en")
                     extraTitle: 'expanded',
                     defaultText: '2 спальни, 2 кровати...',
                     arr: [
-                        {item: 'спальни', num: 2},
-                        {item: 'кровати', num: 2},
-                        {item: 'ванные комнаты', num: 0},
+                        {item: 'спальни', counterClass: 'bedrooms', num: 2},
+                        {item: 'кровати', counterClass: 'beds', num: 2},
+                        {item: 'ванные комнаты', counterClass: 'bathrooms', num: 0},
                     ],
-                    buttons: false
+                    buttons: false,
+                    type: 'beds'
                 })
             .flex
                 .form_wide.form_mr-72
@@ -212,22 +215,24 @@ html(lang="en")
                         title: 'Dropdown',
                         defaultText: 'Сколько гостей',
                         arr: [
-                            {item: 'взрослые', num: 0},
-                            {item: 'дети', num: 0},
-                            {item: 'младенцы', num: 0},
+                            {item: 'взрослые', counterClass: 'adults', num: 0},
+                            {item: 'дети', counterClass: 'children', num: 0},
+                            {item: 'младенцы', counterClass: 'infants', num: 0},
                         ],
-                        buttons: true
+                        buttons: true,
+                        type: 'guests'
                     })
                 .form_wide
                     +dropdown({
                         title: 'Dropdown',
                         defaultText: 'Сколько гостей',
                         arr: [
-                            {item: 'взрослые', num: 0},
-                            {item: 'дети', num: 0},
-                            {item: 'младенцы', num: 0},
+                            {item: 'взрослые', counterClass: 'adults', num: 0},
+                            {item: 'дети', counterClass: 'children', num: 0},
+                            {item: 'младенцы', counterClass: 'infants', num: 0},
                         ],
-                        buttons: true
+                        buttons: true,
+                        type: 'guests'
                     })
 
 

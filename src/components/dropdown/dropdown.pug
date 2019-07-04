@@ -4,9 +4,11 @@ include ../text/text
     options.title - string - left label
     options.extraTitle - string - right label
     options.defaultText - string - text on the result field of the element
-    options.arr - array of obj - {item: string, num: number} item: name of the option, num: start number
+    options.arr - array of obj - {item: string, counterClass: string, num: number}
+        item: name of the option, counterClass: additional class for js counter, num: start number
     options.buttons - bool - buttons at the bottom of the element
     options.positionMod - string|array - position of the element
+    options.type - string - additional class for js
 
 mixin dropdown(options)
     -var position = '';
@@ -25,7 +27,7 @@ mixin dropdown(options)
             })
             if (options.extraTitle)
                 span.dropdown__extra-title= options.extraTitle
-        .dropdown__drop
+        .dropdown__drop(class= 'dropdown__drop_' + options.type)
             span= options.defaultText
             i.material-icons.dropdown__icon keyboard_arrow_down
         .dropdown__options
@@ -37,13 +39,14 @@ mixin dropdown(options)
                         type: 'label'
                     })
                     .dropdown__counter
-                        span.dropdown__counter-btn.dropdown__counter-btn_less -
+                        span(class= val.counterClass).dropdown__counter-btn.dropdown__counter-btn_less -
                         +text({
                             tag: 'span',
                             text: val.num,
-                            type: 'label'
+                            type: 'label',
+                            positionMod: val.counterClass
                         })
-                        span.dropdown__counter-btn.dropdown__counter-btn_more +
+                        span(class= val.counterClass).dropdown__counter-btn.dropdown__counter-btn_more +
             if options.buttons
                 .dropdown__option
                     span.dropdown__btn
