@@ -32,10 +32,11 @@ include ../button/button
             title: 'гости',
             defaultText: '3 гостя',
             arr: [
-                {item: 'взрослые', num: 0},
-                {item: 'дети', num: 0},
-                {item: 'младенцы', num: 0},
+                {item: 'взрослые', counterClass: 'adults', num: 2},
+                {item: 'дети', counterClass: 'children', num: 1},
+                {item: 'младенцы', counterClass: 'infants', num: 0},
             ],
+            type: 'guests-5',
             buttons: true,
             positionMod: 'mb-18'
         })
