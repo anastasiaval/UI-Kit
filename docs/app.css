@@ -4663,6 +4663,8 @@ readers do not read off random characters that represent icons */
       position: relative; }
     .input__label_filter-datepicker {
       position: relative; }
+    .input__label_filter-calendar {
+      position: relative; }
   .input__submit {
     border: none;
     outline: none;
