@@ -84,6 +84,12 @@
       color: $purple;
     }
   }
+  &__result {
+    white-space: nowrap;
+    padding-right: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   &_mb-18 {
     margin-bottom: 18px;
   }

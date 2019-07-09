@@ -34,7 +34,7 @@ import 'components/footer-mini/footer-mini.scss'
 
 require('jquery-ui-bundle');
 require('slick-carousel');
-import 'components/dropdown/dropdown-class';
+import 'components/dropdown/dropdown';
 import 'components/input/input';
 import 'components/input/datepicker-ext';
 import 'components/like-btn/like-btn';

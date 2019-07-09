@@ -8,7 +8,7 @@ include ../text/text
         item: name of the option, counterClass: additional class for js counter, num: start number
     options.buttons - bool - buttons at the bottom of the element
     options.positionMod - string|array - position of the element
-    options.type - string - additional class for js
+    options.type - string - additional modifier for js
 
 mixin dropdown(options)
     -var position = '';
@@ -28,7 +28,7 @@ mixin dropdown(options)
             if (options.extraTitle)
                 span.dropdown__extra-title= options.extraTitle
         .dropdown__drop(class= 'dropdown__drop_' + options.type)
-            span= options.defaultText
+            span.dropdown__result= options.defaultText
             i.material-icons.dropdown__icon keyboard_arrow_down
         .dropdown__options
             each val in options.arr
@@ -48,8 +48,7 @@ mixin dropdown(options)
                         })
                         span(class= val.counterClass).dropdown__counter-btn.dropdown__counter-btn_more +
             if options.buttons
-                .dropdown__option
+                .dropdown__option.dropdown__option_btn
                     span.dropdown__btn
                     span.dropdown__btn.dropdown__btn_apply применить
-//.dropdown__btn_clear очистить
 
