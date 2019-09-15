@@ -49,7 +49,7 @@ class RoomCards {
                    </div>
                    </div>
                        <div class="room-cards__info">
-                           <div class="rate" id="rate-${item.number}"></div>
+<!--                           <div class="rate" id="rate-${item.number}"></div>-->
                            <div>
                                <span class="room-cards__info_text-num">${item.reviews}</span>
                                <span class="room-cards__info_text-num room-cards__info_text-r">Отзывов</span>
